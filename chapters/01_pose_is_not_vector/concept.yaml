@@ -1,0 +1,24 @@
+title: "Pose is not a vector"
+math:
+  - SE(2)
+  - Lie algebra se(2)
+  - exp / log maps
+robotics:
+  - mobile robot pose
+  - pose composition
+  - heading wrap-around
+code:
+  main_file: robotmath/lie/se2.py
+difficulty: beginner
+runtime: "< 10 sec"
+dependencies:
+  - numpy
+  - matplotlib
+failure_cases:
+  - treating (x, y, theta) as a vector space for interpolation
+  - averaging Euler angles directly
+  - composing poses by adding angles without wrap
+  - large rotation linearization with Euclidean Jacobians
+related_libraries:
+  - Sophus
+  - GTSAM

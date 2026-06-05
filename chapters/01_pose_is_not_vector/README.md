@@ -1,0 +1,30 @@
+# Chapter 01 — Pose is not a vector
+
+## Robotics context
+
+A mobile robot pose is **not** a point in R³ you can add and scale freely.
+SE(2) is a **Lie group**: composition is matrix multiplication, inverse is group inverse, and small updates live in the **tangent space** se(2).
+
+## What this demo shows
+
+1. **Composition** — order matters; rotation and translation are coupled.
+2. **exp / log** — incremental motion on the manifold vs adding to (x, y, θ).
+3. **Euler failure** — linear interpolation of angles breaks near ±π.
+
+## Failure cases
+
+| Wrong idea | What breaks |
+|------------|-------------|
+| `pose_a + pose_b` | Not a group operation; heading wraps |
+| Average θ directly | Mean heading jumps at π boundary |
+| Euclidean Jacobian on θ | Linearization fails for large rotations |
+
+## Run
+
+```bash
+python chapters/01_pose_is_not_vector/demo.py
+```
+
+## Next
+
+→ [Chapter 02 — Tiny Lie graph optimizer](../02_tiny_lie_graph_optimizer/)

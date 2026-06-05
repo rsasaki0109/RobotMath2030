@@ -1,0 +1,27 @@
+title: "Sinkhorn for Point Clouds and Maps"
+math:
+  - optimal transport
+  - entropic regularization
+  - Sinkhorn iterations
+  - Wasserstein distance
+robotics:
+  - point cloud registration
+  - map comparison
+  - occupancy distribution alignment
+  - sim-to-real distribution shift
+code:
+  main_file: robotmath/optimal_transport/sinkhorn.py
+difficulty: intermediate
+runtime: "< 20 sec"
+dependencies:
+  - numpy
+  - matplotlib
+failure_cases:
+  - nearest-neighbor matching on unordered points
+  - L2 on sorted indices when point order differs
+  - epsilon too small (numerical underflow)
+  - epsilon too large (over-smoothed transport)
+related_libraries:
+  - POT
+  - GeomLoss
+  - OTT-JAX
