@@ -16,6 +16,7 @@ if str(ROOT) not in sys.path:
 
 from miniworlds.point_cloud_world import misaligned_pair
 from miniworlds.pose_graph_world import square_loop_graph
+from miniworlds.two_path_world import GOAL, START, generate_demonstrations
 from robotmath.lie import se2
 from robotmath.optimal_transport.sinkhorn import pairwise_sq_distances, sinkhorn
 from robotmath.viz import draw_pose_graph, draw_transport_plan, trajectory_from_poses
@@ -101,61 +102,45 @@ def render_sinkhorn_gif(path: Path):
     plt.close(fig)
 
 
-def render_diffusion_concept_gif(path: Path):
-    """Concept GIF: unimodal mean vs multimodal paths (Ch.07 preview, NumPy only)."""
+def render_diffusion_policy_gif(path: Path):
+    """Train tiny diffusion policy and animate denoising (Ch.07)."""
     from PIL import Image
 
-    start = np.array([0.5, 0.08])
-    goal = np.array([0.5, 0.92])
-    left_path = np.column_stack([
-        np.linspace(start[0], 0.22, 40),
-        np.linspace(start[1], goal[1], 40),
-    ])
-    right_path = np.column_stack([
-        np.linspace(start[0], 0.78, 40),
-        np.linspace(start[1], goal[1], 40),
-    ])
-    mean_path = np.column_stack([
-        np.full(40, 0.5),
-        np.linspace(start[1], goal[1], 40),
-    ])
-    rng = np.random.default_rng(0)
+    from robotmath.diffusion import DiffusionPolicy2D, TrainConfig, predict_mean_regression, train_mean_regression
+    from robotmath.viz.plot_trajectory import draw_trajectories, draw_two_path_world
+
+    horizon = 24
+    demos, cond = generate_demonstrations(n_per_mode=48, horizon=horizon, seed=0)
+    test_cond = np.concatenate([START, GOAL])[None, :]
+
+    mean_model = train_mean_regression(demos, cond, horizon=horizon, epochs=80, seed=0)
+    mean_pred = predict_mean_regression(mean_model, test_cond, horizon=horizon)[0]
+
+    cfg = TrainConfig(horizon=horizon, timesteps=20, epochs=100, seed=0)
+    policy = DiffusionPolicy2D(cfg)
+    policy.fit(demos, cond)
+    _, history = policy.sample(test_cond, n_samples=1, return_history=True)
+    samples = policy.sample(test_cond, n_samples=8)
+
     frames: list[Image.Image] = []
-
-    for frame in range(40):
+    n_hist = len(history)
+    for frame in range(n_hist + 8):
         fig, ax = plt.subplots(figsize=(5, 5))
-        ax.add_patch(plt.Circle((0.5, 0.55), 0.12, color="gray", alpha=0.5))
-        ax.scatter(*start, c="k", s=40)
-        ax.scatter(*goal, c="gold", s=50, edgecolors="k")
-        ax.plot(mean_path[:, 0], mean_path[:, 1], "C3--", linewidth=2, label="mean regression")
-        ax.plot(left_path[:, 0], left_path[:, 1], "C0-", alpha=0.35, linewidth=1.5)
-        ax.plot(right_path[:, 0], right_path[:, 1], "C0-", alpha=0.35, linewidth=1.5)
-
-        idx = min(frame, 39)
-        for _ in range(12):
-            lp = left_path[idx] + rng.normal(0, 0.015, size=2)
-            rp = right_path[idx] + rng.normal(0, 0.015, size=2)
-            ax.scatter(lp[0], lp[1], s=18, c="C0", alpha=0.8)
-            ax.scatter(rp[0], rp[1], s=18, c="C0", alpha=0.8)
-        ax.scatter(mean_path[idx, 0], mean_path[idx, 1], s=60, c="C3", marker="x")
-        ax.set_xlim(0, 1)
-        ax.set_ylim(0, 1)
-        ax.set_aspect("equal")
-        ax.set_title("Multimodal actions need diffusion, not one mean")
-        ax.legend(loc="upper left", fontsize=8)
+        draw_two_path_world(ax)
+        draw_trajectories(ax, samples, color="C0", alpha=0.35, linewidth=1.2, label="samples")
+        draw_trajectories(ax, mean_pred[None, ...], color="C3", linewidth=2.0, label="mean regression")
+        if frame < n_hist:
+            draw_trajectories(ax, history[frame][None, ...], color="C1", linewidth=2.5, label="denoising")
+            ax.set_title(f"Diffusion policy — step {frame}/{n_hist - 1}")
+        else:
+            ax.set_title("Diffusion policy — multimodal samples")
+        ax.legend(loc="upper left", fontsize=7)
         fig.canvas.draw()
-        rgba = np.asarray(fig.canvas.buffer_rgba())
-        frames.append(Image.fromarray(rgba))
+        frames.append(Image.fromarray(np.asarray(fig.canvas.buffer_rgba())))
         plt.close(fig)
 
     path.parent.mkdir(parents=True, exist_ok=True)
-    frames[0].save(
-        path,
-        save_all=True,
-        append_images=frames[1:],
-        duration=100,
-        loop=0,
-    )
+    frames[0].save(path, save_all=True, append_images=frames[1:], duration=120, loop=0)
     print(f"wrote {path}")
 
 
@@ -163,7 +148,7 @@ def main():
     plt.switch_backend("Agg")
     render_pose_graph_gif(OUT_DIR / "pose_graph_loop_closure.gif")
     render_sinkhorn_gif(OUT_DIR / "sinkhorn_point_clouds.gif")
-    render_diffusion_concept_gif(OUT_DIR / "diffusion_multimodal_concept.gif")
+    render_diffusion_policy_gif(OUT_DIR / "diffusion_policy_2d.gif")
     print("Done.")
 
 

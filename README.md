@@ -13,10 +13,10 @@ Learn **why** the math appears in robot maps, poses, policies, contact, and worl
 
 | Lie pose graph | Sinkhorn point clouds | Multimodal actions |
 |:--:|:--:|:--:|
-| ![Pose graph loop closure](assets/animations/pose_graph_loop_closure.gif) | ![Sinkhorn OT](assets/animations/sinkhorn_point_clouds.gif) | ![Diffusion concept](assets/animations/diffusion_multimodal_concept.gif) |
-| Ch.02 — SE(2) SLAM | Ch.05 — optimal transport | Ch.07 — preview |
+| ![Pose graph loop closure](assets/animations/pose_graph_loop_closure.gif) | ![Sinkhorn OT](assets/animations/sinkhorn_point_clouds.gif) | ![Diffusion policy 2D](assets/animations/diffusion_policy_2d.gif) |
+| Ch.02 — SE(2) SLAM | Ch.05 — optimal transport | Ch.07 — diffusion policy |
 
-Regenerate GIFs: `python scripts/render_all_gifs.py`
+Regenerate GIFs: `pip install -e ".[torch]" && python scripts/render_all_gifs.py`
 
 ## Why RobotMath2030?
 
@@ -39,13 +39,15 @@ math definition  →  minimal runnable code  →  robotics context  →  failure
 | [01 — Pose is not a vector](chapters/01_pose_is_not_vector/) | SE(2) composition, exp/log, Euler-angle failure |
 | [02 — Tiny Lie graph optimizer](chapters/02_tiny_lie_graph_optimizer/) | Pose graph SLAM in ~50 lines; Euclidean vs Lie residuals |
 | [05 — Sinkhorn for point clouds](chapters/05_sinkhorn_point_clouds/) | Soft correspondence for maps and scans; OT vs naive matching |
+| [07 — Diffusion policy 2D](chapters/07_diffusion_policy_2d/) | Multimodal trajectories; mean regression vs diffusion |
 
 ```bash
 pip install -e ".[dev]"
 python chapters/01_pose_is_not_vector/demo.py
 python chapters/02_tiny_lie_graph_optimizer/demo.py
 python chapters/05_sinkhorn_point_clouds/demo.py
-python scripts/render_all_gifs.py
+pip install -e ".[torch]"
+python chapters/07_diffusion_policy_2d/demo.py
 ```
 
 ## 3-month roadmap
@@ -77,7 +79,7 @@ pip install -e ".[dev]"
 pytest
 ```
 
-Core dependencies: **NumPy**, **Matplotlib**. PyTorch is optional for later chapters.
+Core dependencies: **NumPy**, **Matplotlib**. **PyTorch** is required for Ch.07+ (`pip install -e ".[torch]"`).
 
 ## Positioning
 
