@@ -30,6 +30,16 @@ Diffusion / Flow Matching
     ├── Ch.07 Diffusion policy ✅
     └── Ch.08 Flow matching ✅
 
+Information Geometry
+├── used in: natural policy gradient, TRPO, Fisher preconditioning
+├── failure: one lr on ill-conditioned policy parameters
+└── chapter: Ch.11 Natural gradient ✅
+
+Geometric Deep Learning
+├── used in: 3D manipulation, point cloud policies
+├── failure: flatten coordinates under rotation
+└── chapter: Ch.12 SE(3)-equivariant preview ✅
+
 World Models & Differentiable Physics
 ├── used in: latent dynamics, imagination rollout, system ID
 ├── failure: open-loop drift, hard contact breaks gradients

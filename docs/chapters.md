@@ -39,6 +39,17 @@ Ch.07–08 require PyTorch: `pip install -e ".[torch]"`.
 
 **You learn:** parameter ID through physics, contact gradient failure, latent dynamics, imagination MPC.
 
+## Phase 2 — Distribution geometry extensions
+
+| # | Chapter | Run |
+|---|---------|-----|
+| 11 | [Information geometry](../chapters/11_information_geometry/) | `python chapters/11_information_geometry/demo.py` |
+| 12 | [SE(3)-equivariant preview](../chapters/12_se3_equivariant_preview/) | `python chapters/12_se3_equivariant_preview/demo.py` |
+
+Ch.12 requires PyTorch.
+
+**You learn:** natural gradients on policy manifolds, SE(3) symmetry for 3D perception.
+
 ## Suggested reading orders
 
 **Paper-first (Physical AI):** 07 → 10 → 09 → 05 → 02 → 01
