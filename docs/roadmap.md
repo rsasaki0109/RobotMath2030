@@ -20,7 +20,7 @@ Deliverables: `pip install -e .`, 3 README GIFs, docs skeleton, CI smoke tests.
 | # | Chapter | Status |
 |---|---------|--------|
 | 05 | Sinkhorn for point clouds / maps | ✅ demo |
-| 06 | Wasserstein map evaluation | 🔲 planned |
+| 06 | Wasserstein map evaluation | ✅ demo |
 | 07 | Diffusion policy for 2D trajectories | ✅ demo |
 | 08 | Flow matching vs diffusion | 🔲 planned |
 

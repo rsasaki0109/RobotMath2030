@@ -1,0 +1,25 @@
+title: "Wasserstein Map Evaluation"
+math:
+  - Wasserstein distance
+  - optimal transport on empirical distributions
+  - occupancy map comparison
+robotics:
+  - map quality evaluation
+  - loop closure assessment
+  - map drift detection
+  - SLAM map fusion
+code:
+  main_file: robotmath/optimal_transport/wasserstein.py
+difficulty: intermediate
+runtime: "< 20 sec"
+dependencies:
+  - numpy
+  - matplotlib
+failure_cases:
+  - L2 MSE on sparse full-grid maps dilutes obstacle errors
+  - pixel L2 assumes perfect spatial alignment
+  - ignoring mass transport when occupied sets differ
+  - comparing maps in different coordinate frames without alignment
+related_libraries:
+  - POT
+  - GeomLoss

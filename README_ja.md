@@ -30,11 +30,12 @@ RobotMath2030はそのギャップを埋めます。
 | [01 — Pose is not a vector](chapters/01_pose_is_not_vector/) | SE(2) の合成・exp/log、Euler角の罠 |
 | [02 — Tiny Lie graph optimizer](chapters/02_tiny_lie_graph_optimizer/) | pose graph SLAM；Euclidean vs Lie 残差 |
 | [05 — Sinkhorn for point clouds](chapters/05_sinkhorn_point_clouds/) | 地図・点群のソフト対応；OT vs 素朴なマッチング |
+| [06 — Wasserstein map evaluation](chapters/06_wasserstein_map_evaluation/) | 地図 drift / ghost obstacle；L2 vs W2 |
 | [07 — Diffusion policy 2D](chapters/07_diffusion_policy_2d/) | 多峰性軌道；平均回帰 vs diffusion |
 
 ```bash
 pip install -e ".[dev]"
-python chapters/05_sinkhorn_point_clouds/demo.py
+python chapters/06_wasserstein_map_evaluation/demo.py
 pip install -e ".[torch]"
 python chapters/07_diffusion_policy_2d/demo.py
 ```
