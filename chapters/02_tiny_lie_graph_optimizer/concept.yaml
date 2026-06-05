@@ -1,0 +1,26 @@
+title: "Tiny Lie Graph Optimizer"
+math:
+  - SE(2)
+  - pose graph optimization
+  - Gauss-Newton
+  - Lie algebra residuals
+robotics:
+  - pose graph SLAM
+  - loop closure
+  - odometry drift correction
+code:
+  main_file: robotmath/optimization/tiny_factor_graph.py
+difficulty: intermediate
+runtime: "< 30 sec"
+dependencies:
+  - numpy
+  - matplotlib
+failure_cases:
+  - Euclidean residual on (dx, dy, dtheta)
+  - poor loop closure initialization
+  - angle wrapping in linearized updates
+  - fixing no node (gauge freedom)
+related_libraries:
+  - GTSAM
+  - Ceres
+  - g2o

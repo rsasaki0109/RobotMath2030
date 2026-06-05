@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# Outputs
+*.png
+!assets/figures/.gitkeep
+!assets/animations/.gitkeep
+
+# Coverage
+.coverage
+htmlcov/
+.pytest_cache/
