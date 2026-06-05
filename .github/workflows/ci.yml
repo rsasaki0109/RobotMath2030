@@ -32,4 +32,4 @@ jobs:
       - name: Install
         run: pip install -e ".[all]"
       - name: Run torch chapter tests
-        run: pytest -q tests/test_diffusion_policy.py tests/test_differentiable_physics.py tests/test_world_model.py
+        run: pytest -q tests/test_diffusion_policy.py tests/test_flow_matching.py tests/test_differentiable_physics.py tests/test_world_model.py

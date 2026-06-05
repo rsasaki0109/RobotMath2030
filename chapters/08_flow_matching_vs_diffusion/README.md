@@ -1,0 +1,44 @@
+# Chapter 08 — Flow Matching vs Diffusion
+
+## Robotics context
+
+Diffusion policies work well for multimodal robot trajectories, but sampling requires many denoising steps.
+**Flow matching** learns a velocity field along straight paths from noise to data — often fewer ODE steps at inference.
+
+Both are generative models over action trajectories; the difference is the training objective and sampling dynamics.
+
+## What this demo shows
+
+1. Same two-path world and demonstrations as Chapter 07
+2. **Diffusion** — predict noise ε, reverse DDPM chain (20 steps)
+3. **Flow matching** — predict velocity v = x₁ − x₀, Heun integrate (20 steps)
+4. Side-by-side samples + training loss curves
+
+On this tiny MLP, diffusion is often **more collision-free**; flow matching can still expose **both modes** with a simpler training objective.
+
+## Failure cases
+
+| Wrong idea | What breaks |
+|------------|-------------|
+| Too few Euler steps for flow | Curved / invalid trajectories |
+| Flow without conditioning | Ignores start/goal |
+| Assuming flow is always faster to train | Depends on path design and architecture |
+| Using MSE regression instead of either | Mode averaging → collision (Ch.07) |
+
+## Run
+
+Requires PyTorch:
+
+```bash
+pip install -e ".[torch]"
+python chapters/08_flow_matching_vs_diffusion/demo.py
+```
+
+## Related papers
+
+- Flow Matching for Generative Modeling (Lipman et al.)
+- Diffusion Policy — conditional denoising for robot behavior
+
+## Next
+
+→ Chapter 03 — Retraction vs projection (planned)

@@ -1,0 +1,27 @@
+title: "Flow Matching vs Diffusion"
+math:
+  - flow matching
+  - ordinary differential equations
+  - conditional generative modeling
+  - denoising diffusion
+robotics:
+  - trajectory generation
+  - imitation learning
+  - multimodal action policies
+  - inference speed trade-offs
+code:
+  main_file: robotmath/diffusion/flow_matching_2d.py
+difficulty: intermediate
+runtime: "< 4 min on CPU"
+dependencies:
+  - numpy
+  - matplotlib
+  - torch
+failure_cases:
+  - too few Euler integration steps
+  - unconditioned flow field
+  - mode averaging with mean regression
+related_libraries:
+  - Diffusion Policy (Columbia)
+  - torchcfm
+  - LeRobot
