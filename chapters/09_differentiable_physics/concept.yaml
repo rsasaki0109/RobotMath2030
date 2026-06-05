@@ -1,0 +1,27 @@
+title: "Differentiable Physics — Learn a World Parameter"
+math:
+  - system identification
+  - gradient-based optimization
+  - contact discontinuities
+robotics:
+  - sim-to-real calibration
+  - differentiable simulation
+  - parameter estimation
+  - contact-rich manipulation
+code:
+  main_file: robotmath/physics/mass_spring.py
+difficulty: intermediate
+runtime: "< 30 sec"
+dependencies:
+  - numpy
+  - matplotlib
+  - torch
+failure_cases:
+  - hard contact breaks autograd gradients
+  - soft contact gives wrong physics for gradient convenience
+  - finite differences on noisy contact timing
+  - open-loop rollouts amplify parameter error
+related_libraries:
+  - Brax
+  - MuJoCo MJX
+  - NVIDIA Warp

@@ -1,5 +1,6 @@
 """Synthetic environments for chapter demos."""
 
+from miniworlds.mass_spring_world import bouncing_ball_rollout, noisy_mass_spring_rollout
 from miniworlds.occupancy_map_world import (
     l2_grid_mse,
     map_pair_drift,
@@ -26,4 +27,6 @@ __all__ = [
     "map_pair_identical",
     "map_pair_drift",
     "map_pair_ghost",
+    "noisy_mass_spring_rollout",
+    "bouncing_ball_rollout",
 ]
