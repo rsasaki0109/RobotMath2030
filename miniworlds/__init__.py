@@ -1,5 +1,6 @@
 """Synthetic environments for chapter demos."""
 
+from miniworlds.landmark_pose_world import landmark_pose_problem
 from miniworlds.grid_world import GridWorld
 from miniworlds.mass_spring_world import bouncing_ball_rollout, noisy_mass_spring_rollout
 from miniworlds.occupancy_map_world import (
@@ -16,6 +17,7 @@ from miniworlds.two_path_world import START, GOAL, generate_demonstrations
 
 __all__ = [
     "square_loop_graph",
+    "landmark_pose_problem",
     "l_shape_cloud",
     "misaligned_pair",
     "occupancy_samples",

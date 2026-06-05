@@ -1,0 +1,43 @@
+# Chapter 03 — Retraction vs Projection
+
+## Robotics context
+
+Nonlinear least squares on robot pose lives on a **manifold** (SE(2) / SE(3)), not in flat Rⁿ.
+After computing a tangent-space step ξ, you must **retract** back to the group:
+
+```
+T ← T ⊕ ξ  :=  T exp(ξ)
+```
+
+A common mistake is to **project** by adding ξ directly to (x, y, θ) and wrapping θ.
+That ignores the coupling between translation and rotation and breaks down at large angles.
+
+## What this demo shows
+
+1. Landmark-based SE(2) pose estimation with a bad initial heading (~152°)
+2. **Retraction update** — stays on SE(2), consistent with the tangent gradient
+3. **Projection update** — additive (x, y, θ); slower or wrong convergence
+4. Cost and heading trajectories side by side
+
+## Failure cases
+
+| Wrong idea | What breaks |
+|------------|-------------|
+| `theta += dtheta` after large rotation | Wrong linearization path |
+| Perturb rotation matrix entries without SVD | det(R) ≠ 1, orthogonality lost |
+| Lie residual + Euclidean state update (Ch.02) | Residual is correct, update is still wrong |
+
+## Run
+
+```bash
+python chapters/03_retraction_vs_projection/demo.py
+```
+
+## Related production tools
+
+- Ceres `Manifold` / `LocalParameterization`
+- GTSAM `Retraction` on `Pose2` / `Pose3`
+
+## Next
+
+→ [Chapter 04 — Riemannian motion policy (2D)](../04_riemannian_motion_policy/) (planned)

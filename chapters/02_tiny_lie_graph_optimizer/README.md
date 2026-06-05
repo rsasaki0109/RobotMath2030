@@ -25,7 +25,7 @@ Optimization finds poses that best explain all edges — this is the backbone of
 python chapters/02_tiny_lie_graph_optimizer/demo.py
 ```
 
-## Related production tools
+## Next
 
-- [GTSAM](https://gtsam.org/) — factor graph SLAM
-- [Ceres](http://ceres-solver.org/) — nonlinear least squares with manifolds
+→ [Chapter 03 — Retraction vs projection](../03_retraction_vs_projection/)
+

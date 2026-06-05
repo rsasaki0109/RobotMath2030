@@ -1,0 +1,26 @@
+title: "Retraction vs Projection"
+math:
+  - Lie groups
+  - manifold optimization
+  - retraction maps
+  - tangent space gradients
+robotics:
+  - pose estimation
+  - landmark alignment
+  - SE(2) localization
+  - Ceres / GTSAM manifolds
+code:
+  main_file: robotmath/optimization/manifold_update.py
+difficulty: intermediate
+runtime: "< 30 s on CPU"
+dependencies:
+  - numpy
+  - matplotlib
+failure_cases:
+  - additive Euler-angle updates at large rotation
+  - matrix perturbation without SO(n) projection
+  - correct Lie residual with wrong state update
+related_libraries:
+  - Ceres Solver
+  - GTSAM
+  - Sophus

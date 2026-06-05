@@ -41,4 +41,4 @@ python chapters/08_flow_matching_vs_diffusion/demo.py
 
 ## Next
 
-→ Chapter 03 — Retraction vs projection (planned)
+→ [Chapter 03 — Retraction vs projection](../03_retraction_vs_projection/)
