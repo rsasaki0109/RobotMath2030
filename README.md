@@ -32,7 +32,9 @@ RobotMath2030 fills that gap:
 math definition  →  minimal runnable code  →  robotics context  →  failure cases
 ```
 
-## First demos
+## All 10 chapters
+
+**MVP complete** — full guide: [docs/chapters.md](docs/chapters.md) · machine index: [docs/concept_index.yaml](docs/concept_index.yaml)
 
 | Chapter | What you learn |
 |---------|----------------|
@@ -49,8 +51,18 @@ math definition  →  minimal runnable code  →  robotics context  →  failure
 
 ```bash
 pip install -e ".[torch]"
-python chapters/04_riemannian_motion_policy/demo.py
+python scripts/smoke_all_chapters.py   # headless check all demos
 ```
+
+## Colab notebooks
+
+| Notebook | Topic |
+|----------|-------|
+| [01_geometry_of_state](notebooks/01_geometry_of_state.ipynb) | SE(2) + pose graph |
+| [05_sinkhorn_optimal_transport](notebooks/05_sinkhorn_optimal_transport.ipynb) | Entropic OT |
+| [07_diffusion_policy](notebooks/07_diffusion_policy.ipynb) | Multimodal trajectories |
+
+Open in Colab: `https://colab.research.google.com/github/rsasaki0109/RobotMath2030/blob/main/notebooks/01_geometry_of_state.ipynb`
 
 ## 3-month roadmap
 
@@ -68,7 +80,9 @@ See [docs/roadmap.md](docs/roadmap.md) for the full plan.
 robotmath/     Tiny reference implementations (Lie, OT, diffusion, …)
 chapters/      Runnable lessons with concept.yaml metadata
 miniworlds/    Synthetic worlds for demos
-docs/          Concept maps and references
+notebooks/     Colab quick-start notebooks (3)
+docs/          Concept maps, chapter guide, roadmap
+benchmarks/    Smoke-test notes
 tests/         Math property tests
 ```
 

@@ -1,33 +1,41 @@
-# Math Map (preview)
+# Math Map
 
 Concept connections for robotics engineers and AI agents.
+
+Machine-readable chapter index: [concept_index.yaml](concept_index.yaml)
 
 ```
 SE(2) / SE(3)
 ├── used in: pose estimation, SLAM, manipulation, humanoid state
 ├── libraries: Sophus, GTSAM, Ceres
 ├── failure: treating rotation as Euclidean vector
-└── next:
-    ├── manifold optimization (Ch. 03)
-    ├── pose graph SLAM (Ch. 02) ✅
-    ├── uncertainty on Lie groups
-    └── equivariant networks (Ch. 06+)
+└── chapters:
+    ├── Ch.01 Pose is not a vector ✅
+    ├── Ch.02 Pose graph SLAM ✅
+    ├── Ch.03 Retraction vs projection ✅
+    └── Ch.04 Riemannian motion policies ✅
 
 Optimal Transport
 ├── used in: point cloud registration, map comparison, trajectory alignment
 ├── libraries: POT, GeomLoss, OTT-JAX
 ├── failure: L2 on unordered point sets
-└── next: Sinkhorn (Ch. 05), Wasserstein maps (Ch. 06)
+└── chapters:
+    ├── Ch.05 Sinkhorn ✅
+    └── Ch.06 Wasserstein maps ✅
 
 Diffusion / Flow Matching
 ├── used in: multimodal trajectories, manipulation policies
 ├── failure: unimodal regression → mode averaging
-└── next: Ch. 07–08
+└── chapters:
+    ├── Ch.07 Diffusion policy ✅
+    └── Ch.08 Flow matching ✅
 
-World Models
-├── used in: latent dynamics, imagination rollout, MPC
-├── failure: open-loop rollout drift
-└── next: Ch. 10
+World Models & Differentiable Physics
+├── used in: latent dynamics, imagination rollout, system ID
+├── failure: open-loop drift, hard contact breaks gradients
+└── chapters:
+    ├── Ch.09 Differentiable physics ✅
+    └── Ch.10 Tiny world model ✅
 ```
 
 Each chapter's `concept.yaml` extends this map with machine-readable links.

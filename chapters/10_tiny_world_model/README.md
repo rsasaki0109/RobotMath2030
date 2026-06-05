@@ -29,5 +29,9 @@ python chapters/10_tiny_world_model/demo.py
 
 ## Related
 
-- Chapter 09 — Differentiable physics (learning dynamics parameters)
+- [Chapter 09 — Differentiable physics](../09_differentiable_physics/) (learning dynamics parameters)
 - DreamerV3 — general world-model RL
+
+## Next
+
+You finished the MVP curriculum — see [10 Tiny Math Engines](../../docs/chapters.md) for reading paths and smoke tests.
