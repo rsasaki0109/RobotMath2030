@@ -35,3 +35,5 @@ python chapters/10_tiny_world_model/demo.py
 ## Next
 
 → [Chapter 11 — Information geometry](../11_information_geometry/)
+
+Full index: [10 Tiny Math Engines](../../docs/chapters.md)
