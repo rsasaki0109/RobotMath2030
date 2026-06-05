@@ -1,0 +1,28 @@
+title: "Tiny Latent World Model + Planning"
+math:
+  - latent state models
+  - learned dynamics
+  - model predictive control
+  - imagination rollout
+robotics:
+  - world models
+  - model-based planning
+  - navigation in grid worlds
+  - sim-to-real latent spaces
+code:
+  main_file: robotmath/world_models/latent_dynamics.py
+difficulty: intermediate
+runtime: "< 90 sec on CPU"
+dependencies:
+  - numpy
+  - matplotlib
+  - torch
+failure_cases:
+  - open-loop imagination drift
+  - compounding model error over horizon
+  - planning in latent space without constraint satisfaction
+  - undertrained dynamics on rare contacts/transitions
+related_libraries:
+  - DreamerV3
+  - LeRobot
+  - MuJoCo Playground
