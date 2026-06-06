@@ -39,13 +39,13 @@ math definition  →  minimal runnable code  →  robotics context  →  failure
 | [01 — Pose is not a vector](chapters/01_pose_is_not_vector/) | SE(2) composition, exp/log, Euler-angle failure |
 | [02 — Tiny Lie graph optimizer](chapters/02_tiny_lie_graph_optimizer/) | Pose graph SLAM in ~50 lines; Euclidean vs Lie residuals |
 | [05 — Sinkhorn for point clouds](chapters/05_sinkhorn_point_clouds/) | Soft correspondence for maps and scans; OT vs naive matching |
+| [06 — Wasserstein map evaluation](chapters/06_wasserstein_map_evaluation/) | Map drift / ghost obstacles; L2 grid MSE vs W2 |
 | [07 — Diffusion policy 2D](chapters/07_diffusion_policy_2d/) | Multimodal trajectories; mean regression vs diffusion |
 
 ```bash
 pip install -e ".[dev]"
-python chapters/01_pose_is_not_vector/demo.py
-python chapters/02_tiny_lie_graph_optimizer/demo.py
 python chapters/05_sinkhorn_point_clouds/demo.py
+python chapters/06_wasserstein_map_evaluation/demo.py
 pip install -e ".[torch]"
 python chapters/07_diffusion_policy_2d/demo.py
 ```
