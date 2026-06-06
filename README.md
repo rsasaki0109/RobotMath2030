@@ -42,13 +42,11 @@ math definition  →  minimal runnable code  →  robotics context  →  failure
 | [06 — Wasserstein map evaluation](chapters/06_wasserstein_map_evaluation/) | Map drift / ghost obstacles; L2 grid MSE vs W2 |
 | [07 — Diffusion policy 2D](chapters/07_diffusion_policy_2d/) | Multimodal trajectories; mean regression vs diffusion |
 | [09 — Differentiable physics](chapters/09_differentiable_physics/) | Mass-spring ID; hard contact breaks gradients |
+| [10 — Tiny world model](chapters/10_tiny_world_model/) | Latent dynamics + imagination MPC; open-loop drift |
 
 ```bash
-pip install -e ".[dev]"
-python chapters/06_wasserstein_map_evaluation/demo.py
 pip install -e ".[torch]"
-python chapters/07_diffusion_policy_2d/demo.py
-python chapters/09_differentiable_physics/demo.py
+python chapters/10_tiny_world_model/demo.py
 ```
 
 ## 3-month roadmap

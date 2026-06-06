@@ -33,10 +33,11 @@ RobotMath2030はそのギャップを埋めます。
 | [06 — Wasserstein map evaluation](chapters/06_wasserstein_map_evaluation/) | 地図 drift / ghost obstacle；L2 vs W2 |
 | [07 — Diffusion policy 2D](chapters/07_diffusion_policy_2d/) | 多峰性軌道；平均回帰 vs diffusion |
 | [09 — Differentiable physics](chapters/09_differentiable_physics/) | mass-spring 同定；接触で gradient が壊れる |
+| [10 — Tiny world model](chapters/10_tiny_world_model/) | latent dynamics + imagination MPC |
 
 ```bash
 pip install -e ".[torch]"
-python chapters/09_differentiable_physics/demo.py
+python chapters/10_tiny_world_model/demo.py
 ```
 
 ## 3ヶ月ロードマップ
