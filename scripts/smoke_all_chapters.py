@@ -25,6 +25,7 @@ CHAPTERS: list[tuple[str, bool]] = [
     ("12_se3_equivariant_preview", True),
     ("13_neural_operators", True),
     ("14_topology_tda", False),
+    ("15_fourier_neural_operator", True),
 ]
 
 

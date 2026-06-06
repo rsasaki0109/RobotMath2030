@@ -43,7 +43,9 @@ Geometric Deep Learning
 Neural Operators
 ├── used in: surrogate simulators, PDE / rollout amortization
 ├── failure: grid-flattened MLP without operator structure
-└── chapter: Ch.13 DeepONet preview ✅
+└── chapters:
+    ├── Ch.13 DeepONet preview ✅
+    └── Ch.15 FNO vs DeepONet ✅
 
 Topology / TDA
 ├── used in: loop closure hints, map topology, coverage holes

@@ -1,0 +1,25 @@
+title: "Fourier Neural Operator vs DeepONet"
+math:
+  - Fourier Neural Operator (FNO)
+  - spectral convolution on time grids
+  - operator learning on function spaces
+robotics:
+  - surrogate simulators
+  - global mode mixing for rollout fields
+  - comparison with branch–trunk DeepONet
+code:
+  main_file: robotmath/neural_operators/fno_mass_spring.py
+difficulty: advanced
+runtime: "< 45 s on CPU"
+dependencies:
+  - numpy
+  - matplotlib
+  - torch
+failure_cases:
+  - too few Fourier modes for stiff dynamics
+  - fixed time grid without resolution invariance demo
+  - treating FNO as a generic MLP on flattened grids
+related_libraries:
+  - neuraloperator
+  - DeepONet
+  - Modulus (NVIDIA)

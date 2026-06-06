@@ -32,9 +32,9 @@ RobotMath2030 fills that gap:
 math definition  →  minimal runnable code  →  robotics context  →  failure cases
 ```
 
-## All 14 chapters
+## All 15 chapters
 
-**Phase 2 complete (v0.2.0)** — full guide: [docs/chapters.md](docs/chapters.md) · machine index: [docs/concept_index.yaml](docs/concept_index.yaml)
+**Phase 3 complete (v0.2.1)** — full guide: [docs/chapters.md](docs/chapters.md) · machine index: [docs/concept_index.yaml](docs/concept_index.yaml)
 
 | Chapter | What you learn |
 |---------|----------------|
@@ -52,6 +52,7 @@ math definition  →  minimal runnable code  →  robotics context  →  failure
 | [12 — SE(3)-equivariant preview](chapters/12_se3_equivariant_preview/) | Point cloud vector readout; rotation breaks naive MLP |
 | [13 — Neural operators](chapters/13_neural_operators/) | DeepONet mass-spring operator; amortized rollout vs integrator |
 | [14 — Topology / TDA](chapters/14_topology_tda/) | Loop detection in scans; β₁ sweep vs single-scale components |
+| [15 — Fourier Neural Operator](chapters/15_fourier_neural_operator/) | FNO vs DeepONet on mass-spring; spectral mixing on time grid |
 
 ```bash
 pip install -e ".[torch]"
@@ -65,6 +66,9 @@ python scripts/smoke_all_chapters.py   # headless check all demos
 | [01_geometry_of_state](notebooks/01_geometry_of_state.ipynb) | SE(2) + pose graph |
 | [05_sinkhorn_optimal_transport](notebooks/05_sinkhorn_optimal_transport.ipynb) | Entropic OT |
 | [07_diffusion_policy](notebooks/07_diffusion_policy.ipynb) | Multimodal trajectories |
+| [08_flow_matching](notebooks/08_flow_matching.ipynb) | Flow matching vs diffusion |
+| [10_world_model](notebooks/10_world_model.ipynb) | Latent world model + MPC |
+| [13_neural_operators](notebooks/13_neural_operators.ipynb) | DeepONet operator |
 
 Open in Colab: `https://colab.research.google.com/github/rsasaki0109/RobotMath2030/blob/main/notebooks/01_geometry_of_state.ipynb`
 
@@ -86,7 +90,7 @@ See [docs/roadmap.md](docs/roadmap.md) for the full plan.
 robotmath/     Tiny reference implementations (Lie, OT, diffusion, …)
 chapters/      Runnable lessons with concept.yaml metadata
 miniworlds/    Synthetic worlds for demos
-notebooks/     Colab quick-start notebooks (3)
+notebooks/     Colab quick-start notebooks (6)
 docs/          Concept maps, chapter guide, roadmap
 benchmarks/    Smoke-test notes
 tests/         Math property tests
