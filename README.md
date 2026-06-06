@@ -1,11 +1,19 @@
 # RobotMath2030
 
+[![CI](https://github.com/rsasaki0109/RobotMath2030/actions/workflows/ci.yml/badge.svg)](https://github.com/rsasaki0109/RobotMath2030/actions/workflows/ci.yml)
+[![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-indigo)](https://rsasaki0109.github.io/RobotMath2030/landing/)
+[![Release](https://img.shields.io/github/v/release/rsasaki0109/RobotMath2030?label=release)](https://github.com/rsasaki0109/RobotMath2030/releases)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 **RobotMath2030 is an executable visual guide to the mathematics behind future robotics, Physical AI, world models, and humanoids.**
 
 Not a textbook. Not a paper reimplementation repo.
 Learn **why** the math appears in robot maps, poses, policies, contact, and world models — with tiny Python code and interactive visualizations.
 
 > Read this **after** [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics), **before** GTSAM / Ceres / LeRobot production stacks.
+
+**Try in browser (no install):** open any [Colab notebook](notebooks/) — e.g. [Ch.07 diffusion policy](https://colab.research.google.com/github/rsasaki0109/RobotMath2030/blob/main/notebooks/07_diffusion_policy.ipynb)
 
 [日本語 README](README_ja.md)
 
