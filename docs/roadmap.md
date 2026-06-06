@@ -51,11 +51,12 @@
 | 1000 ⭐ | "10 Tiny Math Engines" landing page |
 | 5000 ⭐ | docs site, contributors, reading-group adoption |
 
-## Phase 2 (in progress)
+## Phase 2 ✅
 
 | Item | Status |
 |------|--------|
 | Ch.11 Information geometry | ✅ demo |
 | Ch.12 SE(3)-equivariant preview | ✅ demo |
+| Ch.13 Neural operators | ✅ demo |
 | Static docs site (MkDocs) | ✅ [GitHub Pages](https://rsasaki0109.github.io/RobotMath2030/) |
-| Neural operators / benchmark suite | ✅ Ch.13 + `benchmarks/run_benchmarks.py` |
+| Benchmark suite | ✅ `benchmarks/run_benchmarks.py` |
