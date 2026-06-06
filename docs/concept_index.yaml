@@ -93,9 +93,7 @@ chapters:
     demo: chapters/10_tiny_world_model/demo.py
     concept: chapters/10_tiny_world_model/concept.yaml
     requires_torch: true
-    next: null
-
-  "11":
+    next: "11"
     slug: 11_information_geometry
     title: "Information Geometry — Natural Gradient"
     pillar: geometry_of_distribution
