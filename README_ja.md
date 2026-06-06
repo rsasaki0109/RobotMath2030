@@ -32,12 +32,11 @@ RobotMath2030はそのギャップを埋めます。
 | [05 — Sinkhorn for point clouds](chapters/05_sinkhorn_point_clouds/) | 地図・点群のソフト対応；OT vs 素朴なマッチング |
 | [06 — Wasserstein map evaluation](chapters/06_wasserstein_map_evaluation/) | 地図 drift / ghost obstacle；L2 vs W2 |
 | [07 — Diffusion policy 2D](chapters/07_diffusion_policy_2d/) | 多峰性軌道；平均回帰 vs diffusion |
+| [09 — Differentiable physics](chapters/09_differentiable_physics/) | mass-spring 同定；接触で gradient が壊れる |
 
 ```bash
-pip install -e ".[dev]"
-python chapters/06_wasserstein_map_evaluation/demo.py
 pip install -e ".[torch]"
-python chapters/07_diffusion_policy_2d/demo.py
+python chapters/09_differentiable_physics/demo.py
 ```
 
 ## 3ヶ月ロードマップ

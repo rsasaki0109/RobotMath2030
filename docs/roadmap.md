@@ -28,7 +28,7 @@ Deliverables: `pip install -e .`, 3 README GIFs, docs skeleton, CI smoke tests.
 
 | # | Chapter | Status |
 |---|---------|--------|
-| 09 | Differentiable physics (mass-spring / ball) | 🔲 planned |
+| 09 | Differentiable physics (mass-spring / ball) | ✅ demo |
 | 10 | Tiny latent world model + planning | 🔲 planned |
 
 Launch: English README polish, 10 notebooks, benchmark suite, blog post.

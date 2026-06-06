@@ -31,5 +31,5 @@ jobs:
           python-version: "3.12"
       - name: Install
         run: pip install -e ".[all]"
-      - name: Run diffusion tests
-        run: pytest -q tests/test_diffusion_policy.py
+      - name: Run torch chapter tests
+        run: pytest -q tests/test_diffusion_policy.py tests/test_differentiable_physics.py

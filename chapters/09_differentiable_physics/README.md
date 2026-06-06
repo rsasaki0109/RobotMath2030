@@ -1,0 +1,33 @@
+# Chapter 09 — Differentiable Physics
+
+## Robotics context
+
+Physical AI needs simulators you can **calibrate** and **differentiate**:
+estimate friction, stiffness, or gravity from trajectories, then optimize policies or designs.
+
+Smooth systems (mass-spring) are friendly to autograd.
+**Contact** (bouncing, grasping) introduces discontinuities — gradients break or lie.
+
+## What this demo shows
+
+1. **Mass-spring ID** — finite differences vs PyTorch autograd both recover stiffness/damping
+2. **Bouncing ball** — hard contact makes autograd through impacts unreliable
+
+## Failure cases
+
+| Situation | What breaks |
+|-----------|-------------|
+| Hard contact bounce | Velocity flip → discontinuous sensitivities |
+| Soft penalty contact | Differentiable but unphysical penetration |
+| Wrong differentiable model | Gradients exist but point the wrong way |
+
+## Run
+
+```bash
+pip install -e ".[torch]"
+python chapters/09_differentiable_physics/demo.py
+```
+
+## Next
+
+→ Chapter 10 — Tiny latent world model + planning (planned)
