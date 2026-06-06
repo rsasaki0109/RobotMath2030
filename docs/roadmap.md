@@ -11,7 +11,7 @@
 | 01 | Pose is not a vector | ✅ demo |
 | 02 | Tiny Lie graph optimizer | ✅ demo |
 | 03 | Retraction vs projection | ✅ demo |
-| 04 | Riemannian motion policy (2D) | 🔲 planned |
+| 04 | Riemannian motion policy (2D) | ✅ demo |
 
 Deliverables: `pip install -e .`, 3 README GIFs, docs skeleton, CI smoke tests.
 

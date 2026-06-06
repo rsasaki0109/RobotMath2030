@@ -1,0 +1,43 @@
+# Chapter 04 — Riemannian Motion Policy (2D)
+
+## Robotics context
+
+Real robots combine many motion objectives at once: reach the goal, stay away from obstacles, respect joint limits, follow a reference.
+**Riemannian Motion Policies (RMPs)** merge task-space accelerations through **position-dependent metrics**:
+
+```
+M(q) = Σ Jᵢᵀ Mᵢ Jᵢ ,   f(q) = Σ Jᵢᵀ Mᵢ uᵢ ,   q̈ = M(q)⁻¹ f(q)
+```
+
+This is smoother and more consistent than naively adding repulsive + attractive forces.
+
+## What this demo shows
+
+1. Two-path world (same geometry as Ch.07) with a slightly off-center start
+2. **Goal task** — attract to target in position space
+3. **Obstacle task** — clearance metric blows up near the disk
+4. **Naive sum** vs **RMP fusion** rollouts on a 2D point robot
+
+## Failure cases
+
+| Wrong idea | What breaks |
+|------------|-------------|
+| Sum attractive + repulsive forces | Fighting tasks; collision or chatter |
+| Fixed metric everywhere | Obstacle ignored until too late |
+| Symmetric start on obstacle axis | No lateral escape without metric shaping |
+| Ignore task Jacobians | Wrong push direction in configuration space |
+
+## Run
+
+```bash
+python chapters/04_riemannian_motion_policy/demo.py
+```
+
+## Related papers / tools
+
+- RMPflow — Riemannian motion policies on manipulators
+- Geometric control on Lie groups (connects to Ch.01–03)
+
+## Next
+
+→ [Chapter 05 — Sinkhorn for point clouds](../05_sinkhorn_point_clouds/)

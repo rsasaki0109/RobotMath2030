@@ -40,4 +40,4 @@ python chapters/03_retraction_vs_projection/demo.py
 
 ## Next
 
-→ [Chapter 04 — Riemannian motion policy (2D)](../04_riemannian_motion_policy/) (planned)
+→ [Chapter 04 — Riemannian motion policy (2D)](../04_riemannian_motion_policy/)

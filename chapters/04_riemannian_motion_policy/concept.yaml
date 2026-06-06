@@ -1,0 +1,25 @@
+title: "Riemannian Motion Policy (2D)"
+math:
+  - Riemannian metrics
+  - task-space maps
+  - Jacobian pullbacks
+  - acceleration fusion
+robotics:
+  - motion generation
+  - obstacle avoidance
+  - potential field failures
+  - RMPflow
+code:
+  main_file: robotmath/motion/rmp_2d.py
+difficulty: intermediate
+runtime: "< 10 s on CPU"
+dependencies:
+  - numpy
+  - matplotlib
+failure_cases:
+  - naive sum of task forces
+  - symmetric start without lateral escape
+  - ignoring position-dependent metrics
+related_libraries:
+  - RMPflow
+  - PythonRobotics (APF chapters)
