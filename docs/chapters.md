@@ -1,6 +1,6 @@
-# 10 Tiny Math Engines
+# 10+2 Tiny Math Engines
 
-All ten MVP chapters are runnable locally. Each follows:
+All twelve chapters are runnable locally. Each follows:
 
 **math → minimal code → robotics context → failure cases**
 
@@ -10,10 +10,10 @@ Machine-readable index: [concept_index.yaml](concept_index.yaml)
 
 | # | Chapter | Run |
 |---|---------|-----|
-| 01 | [Pose is not a vector](../chapters/01_pose_is_not_vector/) | `python chapters/01_pose_is_not_vector/demo.py` |
-| 02 | [Tiny Lie graph optimizer](../chapters/02_tiny_lie_graph_optimizer/) | `python chapters/02_tiny_lie_graph_optimizer/demo.py` |
-| 03 | [Retraction vs projection](../chapters/03_retraction_vs_projection/) | `python chapters/03_retraction_vs_projection/demo.py` |
-| 04 | [Riemannian motion policy (2D)](../chapters/04_riemannian_motion_policy/) | `python chapters/04_riemannian_motion_policy/demo.py` |
+| 01 | [Pose is not a vector](chapters/01_pose_is_not_vector.md) | `python chapters/01_pose_is_not_vector/demo.py` |
+| 02 | [Tiny Lie graph optimizer](chapters/02_tiny_lie_graph_optimizer.md) | `python chapters/02_tiny_lie_graph_optimizer/demo.py` |
+| 03 | [Retraction vs projection](chapters/03_retraction_vs_projection.md) | `python chapters/03_retraction_vs_projection/demo.py` |
+| 04 | [Riemannian motion policy (2D)](chapters/04_riemannian_motion_policy.md) | `python chapters/04_riemannian_motion_policy/demo.py` |
 
 **You learn:** Lie groups, pose graphs, manifold updates, task-space motion metrics.
 
@@ -21,10 +21,10 @@ Machine-readable index: [concept_index.yaml](concept_index.yaml)
 
 | # | Chapter | Run |
 |---|---------|-----|
-| 05 | [Sinkhorn for point clouds](../chapters/05_sinkhorn_point_clouds/) | `python chapters/05_sinkhorn_point_clouds/demo.py` |
-| 06 | [Wasserstein map evaluation](../chapters/06_wasserstein_map_evaluation/) | `python chapters/06_wasserstein_map_evaluation/demo.py` |
-| 07 | [Diffusion policy 2D](../chapters/07_diffusion_policy_2d/) | `python chapters/07_diffusion_policy_2d/demo.py` |
-| 08 | [Flow matching vs diffusion](../chapters/08_flow_matching_vs_diffusion/) | `python chapters/08_flow_matching_vs_diffusion/demo.py` |
+| 05 | [Sinkhorn for point clouds](chapters/05_sinkhorn_point_clouds.md) | `python chapters/05_sinkhorn_point_clouds/demo.py` |
+| 06 | [Wasserstein map evaluation](chapters/06_wasserstein_map_evaluation.md) | `python chapters/06_wasserstein_map_evaluation/demo.py` |
+| 07 | [Diffusion policy 2D](chapters/07_diffusion_policy_2d.md) | `python chapters/07_diffusion_policy_2d/demo.py` |
+| 08 | [Flow matching vs diffusion](chapters/08_flow_matching_vs_diffusion.md) | `python chapters/08_flow_matching_vs_diffusion/demo.py` |
 
 Ch.07–08 require PyTorch: `pip install -e ".[torch]"`.
 
@@ -34,8 +34,8 @@ Ch.07–08 require PyTorch: `pip install -e ".[torch]"`.
 
 | # | Chapter | Run |
 |---|---------|-----|
-| 09 | [Differentiable physics](../chapters/09_differentiable_physics/) | `python chapters/09_differentiable_physics/demo.py` |
-| 10 | [Tiny world model + planning](../chapters/10_tiny_world_model/) | `python chapters/10_tiny_world_model/demo.py` |
+| 09 | [Differentiable physics](chapters/09_differentiable_physics.md) | `python chapters/09_differentiable_physics/demo.py` |
+| 10 | [Tiny world model + planning](chapters/10_tiny_world_model.md) | `python chapters/10_tiny_world_model/demo.py` |
 
 **You learn:** parameter ID through physics, contact gradient failure, latent dynamics, imagination MPC.
 
@@ -43,8 +43,8 @@ Ch.07–08 require PyTorch: `pip install -e ".[torch]"`.
 
 | # | Chapter | Run |
 |---|---------|-----|
-| 11 | [Information geometry](../chapters/11_information_geometry/) | `python chapters/11_information_geometry/demo.py` |
-| 12 | [SE(3)-equivariant preview](../chapters/12_se3_equivariant_preview/) | `python chapters/12_se3_equivariant_preview/demo.py` |
+| 11 | [Information geometry](chapters/11_information_geometry.md) | `python chapters/11_information_geometry/demo.py` |
+| 12 | [SE(3)-equivariant preview](chapters/12_se3_equivariant_preview.md) | `python chapters/12_se3_equivariant_preview/demo.py` |
 
 Ch.12 requires PyTorch.
 
@@ -56,11 +56,11 @@ Ch.12 requires PyTorch.
 
 **SLAM / mapping engineer:** 01 → 02 → 03 → 05 → 06 → 04
 
-**Full curriculum:** 01 through 10 in order
+**Full curriculum:** 01 through 12 in order
 
 ## Colab quick start
 
-Open a notebook under [`notebooks/`](../notebooks/) or run any demo in Colab:
+Open a notebook on [GitHub](https://github.com/rsasaki0109/RobotMath2030/tree/main/notebooks) or run any demo in Colab:
 
 ```python
 !git clone https://github.com/rsasaki0109/RobotMath2030.git

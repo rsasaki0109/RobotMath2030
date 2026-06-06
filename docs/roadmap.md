@@ -57,5 +57,5 @@
 |------|--------|
 | Ch.11 Information geometry | ✅ demo |
 | Ch.12 SE(3)-equivariant preview | ✅ demo |
+| Static docs site (MkDocs) | ✅ [GitHub Pages](https://rsasaki0109.github.io/RobotMath2030/) |
 | Neural operators / benchmark suite | 🔲 planned |
-| Static docs site (MkDocs) | 🔲 planned |
