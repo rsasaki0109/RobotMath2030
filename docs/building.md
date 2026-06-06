@@ -31,4 +31,5 @@ Published URL: https://rsasaki0109.github.io/RobotMath2030/
 ## Editing chapter pages
 
 Edit the source under `chapters/<slug>/README.md`, then re-run `scripts/sync_chapter_docs.py`.
+This also copies demo GIFs from `assets/animations/` into `docs/assets/animations/` for the landing page.
 Do not hand-edit files in `docs/chapters/` (they are generated).

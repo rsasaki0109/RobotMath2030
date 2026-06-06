@@ -33,23 +33,14 @@
 
 | Deliverable | Status |
 |-------------|--------|
-| 10 runnable chapters | ✅ |
+| 10 runnable chapters | ✅ (now 15) |
 | `pip install -e .` | ✅ |
-| README GIFs (3) | ✅ |
+| README GIFs (6) | ✅ |
 | [concept_index.yaml](concept_index.yaml) | ✅ |
 | [Chapter guide](chapters.md) | ✅ |
-| 3 Colab notebooks | ✅ [notebooks](https://github.com/rsasaki0109/RobotMath2030/tree/main/notebooks) |
+| 6 Colab notebooks | ✅ [notebooks](https://github.com/rsasaki0109/RobotMath2030/tree/main/notebooks) |
 | CI + chapter smoke test | ✅ `scripts/smoke_all_chapters.py` |
 | English + Japanese README | ✅ |
-
-## Star milestones
-
-| Target | Requirement |
-|--------|-------------|
-| 100 ⭐ | English README + 3 GIFs + 3 Colab notebooks |
-| 500 ⭐ | 10 chapters, weekly cadence, community posts |
-| 1000 ⭐ | "10 Tiny Math Engines" landing page |
-| 5000 ⭐ | docs site, contributors, reading-group adoption |
 
 ## Phase 2 ✅
 
@@ -70,3 +61,21 @@
 | 15 | FNO vs DeepONet (extend Ch.13) | ✅ demo |
 | — | v0.2.0 release tag | ✅ |
 | — | Additional Colab notebooks (08, 10, 13) | ✅ |
+
+## Phase 4 — community polish ✅
+
+| Item | Status |
+|------|--------|
+| [15 Tiny Math Engines landing page](landing.md) | ✅ MkDocs |
+| README / docs GIF gallery (6) | ✅ |
+| [CONTRIBUTING.md](https://github.com/rsasaki0109/RobotMath2030/blob/main/CONTRIBUTING.md) | ✅ expanded |
+| v0.2.1 release tag | ✅ |
+
+## Star milestones
+
+| Target | Requirement |
+|--------|-------------|
+| 100 ⭐ | English README + GIFs + Colab notebooks |
+| 500 ⭐ | 15 chapters, weekly cadence, community posts |
+| 1000 ⭐ | "15 Tiny Math Engines" landing page ✅ |
+| 5000 ⭐ | docs site ✅, contributors, reading-group adoption |

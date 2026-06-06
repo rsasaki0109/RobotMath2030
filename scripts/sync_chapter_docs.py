@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import re
+import shutil
 from pathlib import Path
 
 import yaml
@@ -12,6 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 INDEX = ROOT / "docs" / "concept_index.yaml"
 OUT_DIR = ROOT / "docs" / "chapters"
 NAV_OUT = ROOT / "docs" / "_nav_chapters.yaml"
+ASSETS_SRC = ROOT / "assets" / "animations"
+ASSETS_DST = ROOT / "docs" / "assets" / "animations"
 
 
 def _rewrite_links(text: str) -> str:
@@ -55,7 +58,16 @@ def main() -> None:
         yaml.safe_dump(nav_entries, sort_keys=False, allow_unicode=True),
         encoding="utf-8",
     )
+
+    ASSETS_DST.mkdir(parents=True, exist_ok=True)
+    copied = 0
+    if ASSETS_SRC.is_dir():
+        for gif in ASSETS_SRC.glob("*.gif"):
+            shutil.copy2(gif, ASSETS_DST / gif.name)
+            copied += 1
+
     print(f"Synced {len(nav_entries)} chapters to {OUT_DIR}")
+    print(f"Copied {copied} GIF(s) to {ASSETS_DST}")
     print(f"Nav snippet: {NAV_OUT}")
 
 
