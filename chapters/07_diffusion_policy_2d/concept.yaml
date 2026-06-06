@@ -1,0 +1,26 @@
+title: "Diffusion Policy for 2D Trajectories"
+math:
+  - denoising diffusion
+  - multimodal distributions
+  - conditional generative modeling
+robotics:
+  - manipulation trajectories
+  - imitation learning
+  - multimodal action policies
+  - obstacle avoidance
+code:
+  main_file: robotmath/diffusion/diffusion_policy_2d.py
+difficulty: intermediate
+runtime: "< 3 min on CPU"
+dependencies:
+  - numpy
+  - matplotlib
+  - torch
+failure_cases:
+  - mean regression on multimodal demos
+  - mode averaging through obstacles
+  - too few denoising steps at inference
+  - unimodal Gaussian policy on bimodal data
+related_libraries:
+  - Diffusion Policy (Columbia)
+  - LeRobot

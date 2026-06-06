@@ -13,9 +13,9 @@
 
 | Lie pose graph | Sinkhorn 点群 | 多峰性行動 |
 |:--:|:--:|:--:|
-| ![Pose graph](assets/animations/pose_graph_loop_closure.gif) | ![Sinkhorn](assets/animations/sinkhorn_point_clouds.gif) | ![Diffusion](assets/animations/diffusion_multimodal_concept.gif) |
+| ![Pose graph](assets/animations/pose_graph_loop_closure.gif) | ![Sinkhorn](assets/animations/sinkhorn_point_clouds.gif) | ![Diffusion](assets/animations/diffusion_policy_2d.gif) |
 
-GIF 再生成: `python scripts/render_all_gifs.py`
+GIF 再生成: `pip install -e ".[torch]" && python scripts/render_all_gifs.py`
 
 ## なぜ RobotMath2030 か
 
@@ -30,11 +30,13 @@ RobotMath2030はそのギャップを埋めます。
 | [01 — Pose is not a vector](chapters/01_pose_is_not_vector/) | SE(2) の合成・exp/log、Euler角の罠 |
 | [02 — Tiny Lie graph optimizer](chapters/02_tiny_lie_graph_optimizer/) | pose graph SLAM；Euclidean vs Lie 残差 |
 | [05 — Sinkhorn for point clouds](chapters/05_sinkhorn_point_clouds/) | 地図・点群のソフト対応；OT vs 素朴なマッチング |
+| [07 — Diffusion policy 2D](chapters/07_diffusion_policy_2d/) | 多峰性軌道；平均回帰 vs diffusion |
 
 ```bash
 pip install -e ".[dev]"
 python chapters/05_sinkhorn_point_clouds/demo.py
-python scripts/render_all_gifs.py
+pip install -e ".[torch]"
+python chapters/07_diffusion_policy_2d/demo.py
 ```
 
 ## 3ヶ月ロードマップ
@@ -54,7 +56,7 @@ pip install -e ".[dev]"
 pytest
 ```
 
-コア依存: **NumPy**, **Matplotlib**。PyTorchは後半章で任意。
+コア依存: **NumPy**, **Matplotlib**。Ch.07 以降は **PyTorch**（`pip install -e ".[torch]"`）。
 
 ## ライセンス
 
