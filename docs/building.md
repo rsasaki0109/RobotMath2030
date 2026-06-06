@@ -22,7 +22,7 @@ Output: `site/`
 
 ## CI / GitHub Pages
 
-Push to `main` runs [.github/workflows/docs.yml](../.github/workflows/docs.yml).
+Push to `main` runs the [`docs` workflow](https://github.com/rsasaki0109/RobotMath2030/blob/main/.github/workflows/docs.yml).
 
 Enable **Settings → Pages → Build and deployment → GitHub Actions** once per repository.
 
