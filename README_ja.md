@@ -32,6 +32,7 @@ RobotMath2030はそのギャップを埋めます。
 | [05 — Sinkhorn for point clouds](chapters/05_sinkhorn_point_clouds/) | 地図・点群のソフト対応；OT vs 素朴なマッチング |
 | [06 — Wasserstein map evaluation](chapters/06_wasserstein_map_evaluation/) | 地図 drift / ghost obstacle；L2 vs W2 |
 | [07 — Diffusion policy 2D](chapters/07_diffusion_policy_2d/) | 多峰性軌道；平均回帰 vs diffusion |
+| [08 — Flow matching vs diffusion](chapters/08_flow_matching_vs_diffusion/) | 同タスク；velocity field vs denoising |
 | [09 — Differentiable physics](chapters/09_differentiable_physics/) | mass-spring 同定；接触で gradient が壊れる |
 | [10 — Tiny world model](chapters/10_tiny_world_model/) | latent dynamics + imagination MPC |
 

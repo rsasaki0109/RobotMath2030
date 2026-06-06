@@ -36,4 +36,4 @@ python chapters/07_diffusion_policy_2d/demo.py
 
 ## Next
 
-→ Chapter 08 — Flow matching vs diffusion (planned)
+→ Chapter 08 — [Flow matching vs diffusion](../08_flow_matching_vs_diffusion/)

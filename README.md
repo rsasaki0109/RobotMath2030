@@ -41,12 +41,13 @@ math definition  →  minimal runnable code  →  robotics context  →  failure
 | [05 — Sinkhorn for point clouds](chapters/05_sinkhorn_point_clouds/) | Soft correspondence for maps and scans; OT vs naive matching |
 | [06 — Wasserstein map evaluation](chapters/06_wasserstein_map_evaluation/) | Map drift / ghost obstacles; L2 grid MSE vs W2 |
 | [07 — Diffusion policy 2D](chapters/07_diffusion_policy_2d/) | Multimodal trajectories; mean regression vs diffusion |
+| [08 — Flow matching vs diffusion](chapters/08_flow_matching_vs_diffusion/) | Same task; velocity field vs denoising; fewer ODE steps |
 | [09 — Differentiable physics](chapters/09_differentiable_physics/) | Mass-spring ID; hard contact breaks gradients |
 | [10 — Tiny world model](chapters/10_tiny_world_model/) | Latent dynamics + imagination MPC; open-loop drift |
 
 ```bash
 pip install -e ".[torch]"
-python chapters/10_tiny_world_model/demo.py
+python chapters/08_flow_matching_vs_diffusion/demo.py
 ```
 
 ## 3-month roadmap
