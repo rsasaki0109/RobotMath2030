@@ -16,6 +16,13 @@ Learn **why** the math appears in robot maps, poses, policies, contact, and worl
 | ![Pose graph loop closure](assets/animations/pose_graph_loop_closure.gif) | ![Sinkhorn OT](assets/animations/sinkhorn_point_clouds.gif) | ![Diffusion policy 2D](assets/animations/diffusion_policy_2d.gif) |
 | Ch.02 — SE(2) SLAM | Ch.05 — optimal transport | Ch.07 — diffusion policy |
 
+| Flow matching | World model MPC | TDA loop detection |
+|:--:|:--:|:--:|
+| ![Flow matching](assets/animations/flow_matching_2d.gif) | ![World model MPC](assets/animations/world_model_mpc.gif) | ![TDA loops](assets/animations/tda_loop_detection.gif) |
+| Ch.08 — flow vs diffusion | Ch.10 — imagination replan | Ch.14 — topology / TDA |
+
+**Landing page:** [15 Tiny Math Engines](https://rsasaki0109.github.io/RobotMath2030/landing/) · **Contribute:** [CONTRIBUTING.md](CONTRIBUTING.md)
+
 Regenerate GIFs: `pip install -e ".[torch]" && python scripts/render_all_gifs.py`
 
 ## Why RobotMath2030?

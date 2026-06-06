@@ -40,6 +40,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - 15 Tiny Math Engines: landing.md
   - Chapter guide: chapters.md
   - Chapters:
       - "01 — Pose is not a vector": chapters/01_pose_is_not_vector.md
