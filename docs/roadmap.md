@@ -51,9 +51,11 @@
 | 1000 ⭐ | "10 Tiny Math Engines" landing page |
 | 5000 ⭐ | docs site, contributors, reading-group adoption |
 
-## Phase 2 (future)
+## Phase 2 (in progress)
 
-- Information geometry chapter
-- SE(3)-equivariant policy preview
-- Neural operators / larger benchmark suite
-- Static docs site (MkDocs or similar)
+| Item | Status |
+|------|--------|
+| Ch.11 Information geometry | ✅ demo |
+| Ch.12 SE(3)-equivariant preview | ✅ demo |
+| Neural operators / benchmark suite | 🔲 planned |
+| Static docs site (MkDocs) | 🔲 planned |

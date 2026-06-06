@@ -48,6 +48,8 @@ math definition  →  minimal runnable code  →  robotics context  →  failure
 | [08 — Flow matching vs diffusion](chapters/08_flow_matching_vs_diffusion/) | Same task; velocity field vs denoising; fewer ODE steps |
 | [09 — Differentiable physics](chapters/09_differentiable_physics/) | Mass-spring ID; hard contact breaks gradients |
 | [10 — Tiny world model](chapters/10_tiny_world_model/) | Latent dynamics + imagination MPC; open-loop drift |
+| [11 — Information geometry](chapters/11_information_geometry/) | Fisher metric; natural vs Euclidean gradient on Gaussian policy |
+| [12 — SE(3)-equivariant preview](chapters/12_se3_equivariant_preview/) | Point cloud vector readout; rotation breaks naive MLP |
 
 ```bash
 pip install -e ".[torch]"

@@ -8,7 +8,7 @@ pillars:
     chapters: ["01", "02", "03", "04"]
   geometry_of_distribution:
     label: Geometry of Distribution
-    chapters: ["05", "06", "07", "08"]
+    chapters: ["05", "06", "07", "08", "11", "12"]
   geometry_of_dynamics:
     label: Geometry of Dynamics
     chapters: ["09", "10"]
@@ -95,9 +95,26 @@ chapters:
     requires_torch: true
     next: null
 
+  "11":
+    slug: 11_information_geometry
+    title: "Information Geometry — Natural Gradient"
+    pillar: geometry_of_distribution
+    demo: chapters/11_information_geometry/demo.py
+    concept: chapters/11_information_geometry/concept.yaml
+    requires_torch: false
+    next: "12"
+  "12":
+    slug: 12_se3_equivariant_preview
+    title: "SE(3)-Equivariant Policy Preview"
+    pillar: geometry_of_distribution
+    demo: chapters/12_se3_equivariant_preview/demo.py
+    concept: chapters/12_se3_equivariant_preview/concept.yaml
+    requires_torch: true
+    next: null
+
 reading_paths:
   by_pillar:
     - geometry_of_state
     - geometry_of_distribution
     - geometry_of_dynamics
-  by_number: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"]
+  by_number: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]

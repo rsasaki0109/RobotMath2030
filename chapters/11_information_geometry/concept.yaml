@@ -1,0 +1,25 @@
+title: "Information Geometry — Natural Gradient"
+math:
+  - Fisher information
+  - natural gradient
+  - statistical manifolds
+  - anisotropic Gaussian policies
+robotics:
+  - continuous control policies
+  - imitation learning
+  - TRPO / natural policy gradient
+  - action distribution scaling
+code:
+  main_file: robotmath/info_geom/natural_gradient.py
+difficulty: intermediate
+runtime: "< 10 s on CPU"
+dependencies:
+  - numpy
+  - matplotlib
+failure_cases:
+  - single learning rate on ill-conditioned Fisher
+  - Euclidean updates on probability parameters
+  - ignoring variance / scale in action space
+related_libraries:
+  - TRPO implementations
+  - PyTorch distributions

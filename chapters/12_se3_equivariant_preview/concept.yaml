@@ -1,0 +1,26 @@
+title: "SE(3)-Equivariant Policy Preview"
+math:
+  - group equivariance
+  - SE(3) actions on point clouds
+  - vector vs scalar representations
+robotics:
+  - 3D perception
+  - grasp direction prediction
+  - geometric deep learning
+  - data efficiency
+code:
+  main_file: robotmath/equivariance/se3_point_readout.py
+difficulty: advanced
+runtime: "< 30 s on CPU"
+dependencies:
+  - numpy
+  - matplotlib
+  - torch
+failure_cases:
+  - coordinate flattening MLP
+  - augmentation without symmetry
+  - invariant head for vector outputs
+related_libraries:
+  - e3nn
+  - Vector Neurons
+  - PyTorch Geometric

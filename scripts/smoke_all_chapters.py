@@ -21,6 +21,8 @@ CHAPTERS: list[tuple[str, bool]] = [
     ("08_flow_matching_vs_diffusion", True),
     ("09_differentiable_physics", True),
     ("10_tiny_world_model", True),
+    ("11_information_geometry", False),
+    ("12_se3_equivariant_preview", True),
 ]
 
 

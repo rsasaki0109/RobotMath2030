@@ -34,4 +34,4 @@ python chapters/10_tiny_world_model/demo.py
 
 ## Next
 
-You finished the MVP curriculum — see [10 Tiny Math Engines](../../docs/chapters.md) for reading paths and smoke tests.
+→ [Chapter 11 — Information geometry](../11_information_geometry/)
