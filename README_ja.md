@@ -41,6 +41,7 @@ RobotMath2030はそのギャップを埋めます。
 | [10 — Tiny world model](chapters/10_tiny_world_model/) | latent dynamics + imagination MPC |
 | [11 — Information geometry](chapters/11_information_geometry/) | Fisher metric / natural gradient |
 | [12 — SE(3)-equivariant preview](chapters/12_se3_equivariant_preview/) | 等変性 vs 素朴 MLP |
+| [13 — Neural operators](chapters/13_neural_operators/) | DeepONet  surrogate / 積分の高速化 |
 
 ```bash
 pip install -e ".[torch]"

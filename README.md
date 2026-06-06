@@ -50,6 +50,7 @@ math definition  →  minimal runnable code  →  robotics context  →  failure
 | [10 — Tiny world model](chapters/10_tiny_world_model/) | Latent dynamics + imagination MPC; open-loop drift |
 | [11 — Information geometry](chapters/11_information_geometry/) | Fisher metric; natural vs Euclidean gradient on Gaussian policy |
 | [12 — SE(3)-equivariant preview](chapters/12_se3_equivariant_preview/) | Point cloud vector readout; rotation breaks naive MLP |
+| [13 — Neural operators](chapters/13_neural_operators/) | DeepONet mass-spring operator; amortized rollout vs integrator |
 
 ```bash
 pip install -e ".[torch]"

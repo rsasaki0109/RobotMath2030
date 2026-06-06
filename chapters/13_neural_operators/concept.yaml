@@ -1,0 +1,26 @@
+title: "Neural Operators — DeepONet Preview"
+math:
+  - neural operators
+  - DeepONet branch/trunk factorization
+  - function-space learning
+robotics:
+  - surrogate simulators
+  - amortized MPC rollouts
+  - digital twins
+  - mass-spring dynamics
+code:
+  main_file: robotmath/neural_operators/deeponet_mass_spring.py
+difficulty: advanced
+runtime: "< 30 s on CPU"
+dependencies:
+  - numpy
+  - matplotlib
+  - torch
+failure_cases:
+  - flattened MLP on discretized grids
+  - single-trajectory overfitting
+  - operator extrapolation without coverage
+related_libraries:
+  - DeepONet
+  - Fourier Neural Operator (FNO)
+  - Modulus (NVIDIA)

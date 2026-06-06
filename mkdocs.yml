@@ -54,6 +54,7 @@ nav:
       - "10 — Tiny Latent World Model + Planning": chapters/10_tiny_world_model.md
       - "11 — Information Geometry": chapters/11_information_geometry.md
       - "12 — SE(3)-Equivariant Preview": chapters/12_se3_equivariant_preview.md
+      - "13 — Neural Operators": chapters/13_neural_operators.md
   - Math map: math_map.md
   - Roadmap: roadmap.md
   - Topic ranking: physical_ai_math_2030.md

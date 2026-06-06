@@ -23,6 +23,7 @@ CHAPTERS: list[tuple[str, bool]] = [
     ("10_tiny_world_model", True),
     ("11_information_geometry", False),
     ("12_se3_equivariant_preview", True),
+    ("13_neural_operators", True),
 ]
 
 
