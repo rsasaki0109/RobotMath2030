@@ -50,6 +50,16 @@ Ch.12 requires PyTorch.
 
 **You learn:** natural gradients on policy manifolds, SE(3) symmetry for 3D perception.
 
+## Phase 2 — Dynamics & operators
+
+| # | Chapter | Run |
+|---|---------|-----|
+| 13 | [Neural operators](chapters/13_neural_operators.md) | `python chapters/13_neural_operators/demo.py` |
+
+**You learn:** DeepONet-style operators, amortized simulation vs integrator loops.
+
+Timed benchmarks: `python benchmarks/run_benchmarks.py`
+
 ## Suggested reading orders
 
 **Paper-first (Physical AI):** 07 → 10 → 09 → 05 → 02 → 01

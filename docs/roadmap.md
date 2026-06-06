@@ -38,7 +38,7 @@
 | README GIFs (3) | ✅ |
 | [concept_index.yaml](concept_index.yaml) | ✅ |
 | [Chapter guide](chapters.md) | ✅ |
-| 3 Colab notebooks | ✅ [`notebooks/`](../notebooks/) |
+| 3 Colab notebooks | ✅ [notebooks](https://github.com/rsasaki0109/RobotMath2030/tree/main/notebooks) |
 | CI + chapter smoke test | ✅ `scripts/smoke_all_chapters.py` |
 | English + Japanese README | ✅ |
 
@@ -58,4 +58,4 @@
 | Ch.11 Information geometry | ✅ demo |
 | Ch.12 SE(3)-equivariant preview | ✅ demo |
 | Static docs site (MkDocs) | ✅ [GitHub Pages](https://rsasaki0109.github.io/RobotMath2030/) |
-| Neural operators / benchmark suite | 🔲 planned |
+| Neural operators / benchmark suite | ✅ Ch.13 + `benchmarks/run_benchmarks.py` |

@@ -38,7 +38,12 @@ Information Geometry
 Geometric Deep Learning
 ├── used in: 3D manipulation, point cloud policies
 ├── failure: flatten coordinates under rotation
-└── chapter: Ch.12 SE(3)-equivariant preview ✅
+    └── chapter: Ch.12 SE(3)-equivariant preview ✅
+
+Neural Operators
+├── used in: surrogate simulators, PDE / rollout amortization
+├── failure: grid-flattened MLP without operator structure
+└── chapter: Ch.13 DeepONet preview ✅
 
 World Models & Differentiable Physics
 ├── used in: latent dynamics, imagination rollout, system ID

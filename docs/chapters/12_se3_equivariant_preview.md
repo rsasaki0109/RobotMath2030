@@ -42,4 +42,4 @@ python chapters/12_se3_equivariant_preview/demo.py
 
 ## Next
 
-→ Phase 2: static docs site / larger benchmarks (see [roadmap](../roadmap.md))
+→ [Chapter 13 — Neural operators](13_neural_operators.md)

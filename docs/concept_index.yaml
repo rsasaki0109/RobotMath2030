@@ -11,7 +11,7 @@ pillars:
     chapters: ["05", "06", "07", "08", "11", "12"]
   geometry_of_dynamics:
     label: Geometry of Dynamics
-    chapters: ["09", "10"]
+    chapters: ["09", "10", "13"]
 
 chapters:
   "01":
@@ -110,6 +110,14 @@ chapters:
     demo: chapters/12_se3_equivariant_preview/demo.py
     concept: chapters/12_se3_equivariant_preview/concept.yaml
     requires_torch: true
+    next: "13"
+  "13":
+    slug: 13_neural_operators
+    title: "Neural Operators — DeepONet Preview"
+    pillar: geometry_of_dynamics
+    demo: chapters/13_neural_operators/demo.py
+    concept: chapters/13_neural_operators/concept.yaml
+    requires_torch: true
     next: null
 
 reading_paths:
@@ -117,4 +125,4 @@ reading_paths:
     - geometry_of_state
     - geometry_of_distribution
     - geometry_of_dynamics
-  by_number: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+  by_number: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13"]

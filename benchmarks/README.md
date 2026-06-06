@@ -1,26 +1,34 @@
 # Benchmarks
 
-Lightweight diagnostics for RobotMath2030 — not a production benchmark suite.
+Lightweight timed diagnostics for RobotMath2030 — not a production benchmark suite.
 
 ## Chapter smoke test
-
-Runs every `chapters/*/demo.py` headless (`MPLBACKEND=Agg`):
 
 ```bash
 pip install -e ".[all]"
 python scripts/smoke_all_chapters.py
 ```
 
-Expected runtime: ~1–2 minutes on CPU (PyTorch chapters dominate).
+Expected runtime: ~1–2 minutes on CPU.
+
+## Timed regression suite
+
+```bash
+pip install -e ".[all]"
+python benchmarks/run_benchmarks.py
+```
+
+Reports JSON metrics for:
+
+| Benchmark | Metrics |
+|-----------|---------|
+| **Operator (Ch.13)** | DeepONet test MSE, train time, batch simulator vs operator inference |
+| **World model (Ch.10)** | Train time, closed-loop vs open-loop success |
+
+Exit code 0 when thresholds pass (operator MSE < 0.08, closed-loop replan succeeds).
 
 ## Property tests
-
-Math and behavior checks live under `tests/` and run in CI:
 
 ```bash
 pytest -q
 ```
-
-## Future
-
-Phase 2 may add timed regression baselines (Sinkhorn iterations, diffusion sample collision rate, world-model replan success).
