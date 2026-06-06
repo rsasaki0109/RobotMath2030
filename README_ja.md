@@ -23,7 +23,7 @@ GIF 再生成: `pip install -e ".[torch]" && python scripts/render_all_gifs.py`
 
 RobotMath2030はそのギャップを埋めます。
 
-## 全14章（Phase 2 完成 · v0.2.0）
+## 全15章（Phase 3 完成 · v0.2.1）
 
 完全ガイド: [docs/chapters.md](docs/chapters.md) · 索引: [docs/concept_index.yaml](docs/concept_index.yaml)
 
@@ -43,6 +43,7 @@ RobotMath2030はそのギャップを埋めます。
 | [12 — SE(3)-equivariant preview](chapters/12_se3_equivariant_preview/) | 等変性 vs 素朴 MLP |
 | [13 — Neural operators](chapters/13_neural_operators/) | DeepONet  surrogate / 積分の高速化 |
 | [14 — Topology / TDA](chapters/14_topology_tda/) | スキャンのループ検出；β₁ vs 単一スケール連結成分 |
+| [15 — Fourier Neural Operator](chapters/15_fourier_neural_operator/) | FNO vs DeepONet；時間格子上的スペクトル混合 |
 
 ```bash
 pip install -e ".[torch]"
@@ -56,6 +57,9 @@ python scripts/smoke_all_chapters.py
 | [01_geometry_of_state](notebooks/01_geometry_of_state.ipynb) | SE(2) + pose graph |
 | [05_sinkhorn_optimal_transport](notebooks/05_sinkhorn_optimal_transport.ipynb) | Sinkhorn OT |
 | [07_diffusion_policy](notebooks/07_diffusion_policy.ipynb) | Diffusion policy |
+| [08_flow_matching](notebooks/08_flow_matching.ipynb) | Flow matching |
+| [10_world_model](notebooks/10_world_model.ipynb) | World model + MPC |
+| [13_neural_operators](notebooks/13_neural_operators.ipynb) | DeepONet |
 
 ## 3ヶ月ロードマップ
 

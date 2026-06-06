@@ -62,11 +62,11 @@
 | Benchmark suite | ✅ `benchmarks/run_benchmarks.py` |
 | Benchmark CI job | ✅ `.github/workflows/ci.yml` |
 
-## Phase 3 — in progress
+## Phase 3 ✅
 
 | # | Chapter / item | Status |
 |---|----------------|--------|
 | 14 | Topology / TDA — loop detection in scans | ✅ demo |
+| 15 | FNO vs DeepONet (extend Ch.13) | ✅ demo |
 | — | v0.2.0 release tag | ✅ |
-| — | FNO chapter (extend Ch.13) | planned |
-| — | Additional Colab notebooks (08, 10, 13) | planned |
+| — | Additional Colab notebooks (08, 10, 13) | ✅ |

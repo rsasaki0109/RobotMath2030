@@ -32,7 +32,7 @@ jobs:
       - name: Install
         run: pip install -e ".[all]"
       - name: Run torch chapter tests
-        run: pytest -q tests/test_diffusion_policy.py tests/test_flow_matching.py tests/test_differentiable_physics.py tests/test_world_model.py tests/test_se3_equivariant.py tests/test_neural_operators.py
+        run: pytest -q tests/test_diffusion_policy.py tests/test_flow_matching.py tests/test_differentiable_physics.py tests/test_world_model.py tests/test_se3_equivariant.py tests/test_neural_operators.py tests/test_fno.py
       - name: Smoke all chapter demos
         run: python scripts/smoke_all_chapters.py
         env:

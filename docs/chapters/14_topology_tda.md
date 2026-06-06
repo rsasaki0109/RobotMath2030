@@ -38,4 +38,4 @@ python chapters/14_topology_tda/demo.py
 
 ## Next
 
-→ [Benchmark suite](../../benchmarks/README.md) · [docs site](https://rsasaki0109.github.io/RobotMath2030/)
+→ [Chapter 15 — FNO vs DeepONet](../15_fourier_neural_operator/README.md)

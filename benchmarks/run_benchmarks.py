@@ -15,6 +15,7 @@ if str(ROOT) not in sys.path:
 
 def bench_operator() -> dict:
     from robotmath.neural_operators import OperatorTrainConfig, make_operator_dataset, train_deeponet
+    from robotmath.neural_operators.fno_mass_spring import fno_trajectory_mse, train_fno
     from robotmath.physics.mass_spring import MassSpringParams, simulate
 
     train_u, times, train_y = make_operator_dataset(n_samples=256, seed=0)
@@ -22,12 +23,17 @@ def bench_operator() -> dict:
     cfg = OperatorTrainConfig(epochs=80, seed=0)
 
     t0 = time.perf_counter()
-    model, _ = train_deeponet(train_u, times, train_y, cfg)
-    train_s = time.perf_counter() - t0
+    deeponet, _ = train_deeponet(train_u, times, train_y, cfg)
+    deeponet_train_s = time.perf_counter() - t0
+
+    t0 = time.perf_counter()
+    fno, _ = train_fno(train_u, times, train_y, cfg)
+    fno_train_s = time.perf_counter() - t0
 
     from robotmath.neural_operators import operator_trajectory_mse
 
-    test_mse = operator_trajectory_mse(model, test_u, times, test_y)
+    deeponet_mse = operator_trajectory_mse(deeponet, test_u, times, test_y)
+    fno_mse = fno_trajectory_mse(fno, test_u, times, test_y)
 
     params = MassSpringParams()
     steps = len(times) - 1
@@ -38,14 +44,16 @@ def bench_operator() -> dict:
     sim_s = time.perf_counter() - t0
 
     t0 = time.perf_counter()
-    model.predict_trajectory(test_u[:n], times)
+    deeponet.predict_trajectory(test_u[:n], times)
     infer_s = time.perf_counter() - t0
 
     return {
-        "operator_test_mse": test_mse,
-        "train_seconds": train_s,
+        "deeponet_test_mse": deeponet_mse,
+        "fno_test_mse": fno_mse,
+        "deeponet_train_seconds": deeponet_train_s,
+        "fno_train_seconds": fno_train_s,
         "simulator_batch_seconds": sim_s,
-        "operator_batch_seconds": infer_s,
+        "deeponet_batch_seconds": infer_s,
         "batch_size": n,
     }
 
@@ -78,7 +86,8 @@ def main() -> int:
     }
     print(json.dumps(results, indent=2))
     ok = (
-        results["operator"]["operator_test_mse"] < 0.08
+        results["operator"]["deeponet_test_mse"] < 0.08
+        and results["operator"]["fno_test_mse"] < 0.08
         and results["world_model"]["closed_loop_success"] is True
     )
     return 0 if ok else 1

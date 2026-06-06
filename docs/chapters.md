@@ -1,6 +1,6 @@
-# 14 Tiny Math Engines
+# 15 Tiny Math Engines
 
-All fourteen chapters are runnable locally. Each follows:
+All fifteen chapters are runnable locally. Each follows:
 
 **math → minimal code → robotics context → failure cases**
 
@@ -66,6 +66,16 @@ Ch.12 requires PyTorch.
 
 **You learn:** persistent loops (β₁) in lidar-like clouds vs single-scale connectivity.
 
+## Phase 3 — Neural operators extension
+
+| # | Chapter | Run |
+|---|---------|-----|
+| 15 | [FNO vs DeepONet](chapters/15_fourier_neural_operator.md) | `python chapters/15_fourier_neural_operator/demo.py` |
+
+Ch.15 requires PyTorch.
+
+**You learn:** spectral FNO layers vs branch–trunk DeepONet on the same mass-spring operator task.
+
 Timed benchmarks (CI): `python benchmarks/run_benchmarks.py`
 
 ## Suggested reading orders
@@ -74,7 +84,7 @@ Timed benchmarks (CI): `python benchmarks/run_benchmarks.py`
 
 **SLAM / mapping engineer:** 01 → 02 → 03 → 05 → 06 → 04
 
-**Full curriculum:** 01 through 14 in order
+**Full curriculum:** 01 through 15 in order
 
 ## Colab quick start
 
