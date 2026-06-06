@@ -29,3 +29,7 @@ python chapters/02_tiny_lie_graph_optimizer/demo.py
 
 → [Chapter 03 — Retraction vs projection](../03_retraction_vs_projection/)
 
+## Related production tools
+
+- [GTSAM](https://gtsam.org/) — factor graph SLAM
+- [Ceres](http://ceres-solver.org/) — nonlinear least squares with manifolds

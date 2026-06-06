@@ -23,7 +23,9 @@ GIF 再生成: `pip install -e ".[torch]" && python scripts/render_all_gifs.py`
 
 RobotMath2030はそのギャップを埋めます。
 
-## 最初のデモ
+## 全10章（MVP 完成）
+
+完全ガイド: [docs/chapters.md](docs/chapters.md) · 索引: [docs/concept_index.yaml](docs/concept_index.yaml)
 
 | 章 | 内容 |
 |----|------|
@@ -40,8 +42,16 @@ RobotMath2030はそのギャップを埋めます。
 
 ```bash
 pip install -e ".[torch]"
-python chapters/10_tiny_world_model/demo.py
+python scripts/smoke_all_chapters.py
 ```
+
+## Colab ノートブック
+
+| ノートブック | 内容 |
+|-------------|------|
+| [01_geometry_of_state](notebooks/01_geometry_of_state.ipynb) | SE(2) + pose graph |
+| [05_sinkhorn_optimal_transport](notebooks/05_sinkhorn_optimal_transport.ipynb) | Sinkhorn OT |
+| [07_diffusion_policy](notebooks/07_diffusion_policy.ipynb) | Diffusion policy |
 
 ## 3ヶ月ロードマップ
 

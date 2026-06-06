@@ -39,4 +39,4 @@ python chapters/05_sinkhorn_point_clouds/demo.py
 
 ## Next
 
-→ Chapter 06 — Wasserstein map evaluation (planned)
+→ [Chapter 06 — Wasserstein map evaluation](../06_wasserstein_map_evaluation/)

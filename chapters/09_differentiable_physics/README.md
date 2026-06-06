@@ -30,4 +30,4 @@ python chapters/09_differentiable_physics/demo.py
 
 ## Next
 
-→ Chapter 10 — Tiny latent world model + planning (planned)
+→ [Chapter 10 — Tiny world model + planning](../10_tiny_world_model/)

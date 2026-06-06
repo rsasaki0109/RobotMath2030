@@ -1,0 +1,103 @@
+schema_version: 1
+repository: RobotMath2030
+vision: "Geometry of State → Geometry of Distribution → Geometry of Dynamics"
+
+pillars:
+  geometry_of_state:
+    label: Geometry of State
+    chapters: ["01", "02", "03", "04"]
+  geometry_of_distribution:
+    label: Geometry of Distribution
+    chapters: ["05", "06", "07", "08"]
+  geometry_of_dynamics:
+    label: Geometry of Dynamics
+    chapters: ["09", "10"]
+
+chapters:
+  "01":
+    slug: 01_pose_is_not_vector
+    title: "Pose is not a vector"
+    pillar: geometry_of_state
+    demo: chapters/01_pose_is_not_vector/demo.py
+    concept: chapters/01_pose_is_not_vector/concept.yaml
+    requires_torch: false
+    next: "02"
+  "02":
+    slug: 02_tiny_lie_graph_optimizer
+    title: "Tiny Lie Graph Optimizer"
+    pillar: geometry_of_state
+    demo: chapters/02_tiny_lie_graph_optimizer/demo.py
+    concept: chapters/02_tiny_lie_graph_optimizer/concept.yaml
+    requires_torch: false
+    next: "03"
+  "03":
+    slug: 03_retraction_vs_projection
+    title: "Retraction vs Projection"
+    pillar: geometry_of_state
+    demo: chapters/03_retraction_vs_projection/demo.py
+    concept: chapters/03_retraction_vs_projection/concept.yaml
+    requires_torch: false
+    next: "04"
+  "04":
+    slug: 04_riemannian_motion_policy
+    title: "Riemannian Motion Policy (2D)"
+    pillar: geometry_of_state
+    demo: chapters/04_riemannian_motion_policy/demo.py
+    concept: chapters/04_riemannian_motion_policy/concept.yaml
+    requires_torch: false
+    next: "05"
+  "05":
+    slug: 05_sinkhorn_point_clouds
+    title: "Sinkhorn for Point Clouds and Maps"
+    pillar: geometry_of_distribution
+    demo: chapters/05_sinkhorn_point_clouds/demo.py
+    concept: chapters/05_sinkhorn_point_clouds/concept.yaml
+    requires_torch: false
+    next: "06"
+  "06":
+    slug: 06_wasserstein_map_evaluation
+    title: "Wasserstein Map Evaluation"
+    pillar: geometry_of_distribution
+    demo: chapters/06_wasserstein_map_evaluation/demo.py
+    concept: chapters/06_wasserstein_map_evaluation/concept.yaml
+    requires_torch: false
+    next: "07"
+  "07":
+    slug: 07_diffusion_policy_2d
+    title: "Diffusion Policy for 2D Trajectories"
+    pillar: geometry_of_distribution
+    demo: chapters/07_diffusion_policy_2d/demo.py
+    concept: chapters/07_diffusion_policy_2d/concept.yaml
+    requires_torch: true
+    next: "08"
+  "08":
+    slug: 08_flow_matching_vs_diffusion
+    title: "Flow Matching vs Diffusion"
+    pillar: geometry_of_distribution
+    demo: chapters/08_flow_matching_vs_diffusion/demo.py
+    concept: chapters/08_flow_matching_vs_diffusion/concept.yaml
+    requires_torch: true
+    next: "09"
+  "09":
+    slug: 09_differentiable_physics
+    title: "Differentiable Physics — Learn a World Parameter"
+    pillar: geometry_of_dynamics
+    demo: chapters/09_differentiable_physics/demo.py
+    concept: chapters/09_differentiable_physics/concept.yaml
+    requires_torch: true
+    next: "10"
+  "10":
+    slug: 10_tiny_world_model
+    title: "Tiny Latent World Model + Planning"
+    pillar: geometry_of_dynamics
+    demo: chapters/10_tiny_world_model/demo.py
+    concept: chapters/10_tiny_world_model/concept.yaml
+    requires_torch: true
+    next: null
+
+reading_paths:
+  by_pillar:
+    - geometry_of_state
+    - geometry_of_distribution
+    - geometry_of_dynamics
+  by_number: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"]

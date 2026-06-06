@@ -4,7 +4,7 @@
 
 **Geometry of State → Geometry of Distribution → Geometry of Dynamics**
 
-## Month 1 — Geometry of State (current)
+## Month 1 — Geometry of State ✅
 
 | # | Chapter | Status |
 |---|---------|--------|
@@ -13,9 +13,7 @@
 | 03 | Retraction vs projection | ✅ demo |
 | 04 | Riemannian motion policy (2D) | ✅ demo |
 
-Deliverables: `pip install -e .`, 3 README GIFs, docs skeleton, CI smoke tests.
-
-## Month 2 — Geometry of Distribution
+## Month 2 — Geometry of Distribution ✅
 
 | # | Chapter | Status |
 |---|---------|--------|
@@ -24,14 +22,25 @@ Deliverables: `pip install -e .`, 3 README GIFs, docs skeleton, CI smoke tests.
 | 07 | Diffusion policy for 2D trajectories | ✅ demo |
 | 08 | Flow matching vs diffusion | ✅ demo |
 
-## Month 3 — Geometry of Dynamics
+## Month 3 — Geometry of Dynamics ✅
 
 | # | Chapter | Status |
 |---|---------|--------|
 | 09 | Differentiable physics (mass-spring / ball) | ✅ demo |
 | 10 | Tiny latent world model + planning | ✅ demo |
 
-Launch: English README polish, 10 notebooks, benchmark suite, blog post.
+## MVP launch checklist ✅
+
+| Deliverable | Status |
+|-------------|--------|
+| 10 runnable chapters | ✅ |
+| `pip install -e .` | ✅ |
+| README GIFs (3) | ✅ |
+| [concept_index.yaml](concept_index.yaml) | ✅ |
+| [Chapter guide](chapters.md) | ✅ |
+| 3 Colab notebooks | ✅ [`notebooks/`](../notebooks/) |
+| CI + chapter smoke test | ✅ `scripts/smoke_all_chapters.py` |
+| English + Japanese README | ✅ |
 
 ## Star milestones
 
@@ -41,3 +50,10 @@ Launch: English README polish, 10 notebooks, benchmark suite, blog post.
 | 500 ⭐ | 10 chapters, weekly cadence, community posts |
 | 1000 ⭐ | "10 Tiny Math Engines" landing page |
 | 5000 ⭐ | docs site, contributors, reading-group adoption |
+
+## Phase 2 (future)
+
+- Information geometry chapter
+- SE(3)-equivariant policy preview
+- Neural operators / larger benchmark suite
+- Static docs site (MkDocs or similar)

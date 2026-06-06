@@ -36,4 +36,4 @@ python chapters/06_wasserstein_map_evaluation/demo.py
 
 ## Next
 
-→ Chapter 08 — Flow matching vs diffusion (planned)
+→ [Chapter 07 — Diffusion policy 2D](../07_diffusion_policy_2d/)
