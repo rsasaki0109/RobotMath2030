@@ -60,3 +60,13 @@
 | Ch.13 Neural operators | ✅ demo |
 | Static docs site (MkDocs) | ✅ [GitHub Pages](https://rsasaki0109.github.io/RobotMath2030/) |
 | Benchmark suite | ✅ `benchmarks/run_benchmarks.py` |
+| Benchmark CI job | ✅ `.github/workflows/ci.yml` |
+
+## Phase 3 — in progress
+
+| # | Chapter / item | Status |
+|---|----------------|--------|
+| 14 | Topology / TDA — loop detection in scans | ✅ demo |
+| — | v0.2.0 release tag | ✅ |
+| — | FNO chapter (extend Ch.13) | planned |
+| — | Additional Colab notebooks (08, 10, 13) | planned |

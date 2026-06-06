@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "robotmath2030"
-version = "0.1.0"
+version = "0.2.0"
 description = "Executable visual guide to mathematics for future robotics and Physical AI"
 readme = "README.md"
 license = { text = "MIT" }

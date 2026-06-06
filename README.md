@@ -32,9 +32,9 @@ RobotMath2030 fills that gap:
 math definition  →  minimal runnable code  →  robotics context  →  failure cases
 ```
 
-## All 10 chapters
+## All 14 chapters
 
-**MVP complete** — full guide: [docs/chapters.md](docs/chapters.md) · machine index: [docs/concept_index.yaml](docs/concept_index.yaml)
+**Phase 2 complete (v0.2.0)** — full guide: [docs/chapters.md](docs/chapters.md) · machine index: [docs/concept_index.yaml](docs/concept_index.yaml)
 
 | Chapter | What you learn |
 |---------|----------------|
@@ -51,6 +51,7 @@ math definition  →  minimal runnable code  →  robotics context  →  failure
 | [11 — Information geometry](chapters/11_information_geometry/) | Fisher metric; natural vs Euclidean gradient on Gaussian policy |
 | [12 — SE(3)-equivariant preview](chapters/12_se3_equivariant_preview/) | Point cloud vector readout; rotation breaks naive MLP |
 | [13 — Neural operators](chapters/13_neural_operators/) | DeepONet mass-spring operator; amortized rollout vs integrator |
+| [14 — Topology / TDA](chapters/14_topology_tda/) | Loop detection in scans; β₁ sweep vs single-scale components |
 
 ```bash
 pip install -e ".[torch]"

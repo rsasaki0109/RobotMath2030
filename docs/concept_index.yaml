@@ -8,7 +8,7 @@ pillars:
     chapters: ["01", "02", "03", "04"]
   geometry_of_distribution:
     label: Geometry of Distribution
-    chapters: ["05", "06", "07", "08", "11", "12"]
+    chapters: ["05", "06", "07", "08", "11", "12", "14"]
   geometry_of_dynamics:
     label: Geometry of Dynamics
     chapters: ["09", "10", "13"]
@@ -94,6 +94,7 @@ chapters:
     concept: chapters/10_tiny_world_model/concept.yaml
     requires_torch: true
     next: "11"
+  "11":
     slug: 11_information_geometry
     title: "Information Geometry — Natural Gradient"
     pillar: geometry_of_distribution
@@ -116,6 +117,14 @@ chapters:
     demo: chapters/13_neural_operators/demo.py
     concept: chapters/13_neural_operators/concept.yaml
     requires_torch: true
+    next: "14"
+  "14":
+    slug: 14_topology_tda
+    title: "Topology / TDA — Loop Detection"
+    pillar: geometry_of_distribution
+    demo: chapters/14_topology_tda/demo.py
+    concept: chapters/14_topology_tda/concept.yaml
+    requires_torch: false
     next: null
 
 reading_paths:
@@ -123,4 +132,4 @@ reading_paths:
     - geometry_of_state
     - geometry_of_distribution
     - geometry_of_dynamics
-  by_number: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13"]
+  by_number: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14"]

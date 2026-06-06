@@ -1,0 +1,39 @@
+# Chapter 14 — Topology / TDA for Loop Detection
+
+## Robotics context
+
+Mobile robots build maps from **unordered** range scans. Loop closure asks:
+“Did we revisit a place?” Density clustering and single-scale connectivity count
+**components**, not **holes**. **Persistent homology** tracks when 1-cycles (loops)
+appear and disappear across a scale parameter — a topology-first view of map structure.
+
+## What this demo shows
+
+1. Three synthetic 2D clouds: circle, two separated loops, open corridor (scan order removed)
+2. Local-scale Vietoris–Rips **β₁ sweep** via pure NumPy
+3. Compare loop counts to **connected components at one ε** (failure case)
+
+## Failure cases
+
+| Wrong idea | What breaks |
+|------------|-------------|
+| One ε, count components | Circle is one component — zero loops reported |
+| k-means cluster count | Modes ≠ holes; two loops may look like two blobs only |
+| Scan-order gap heuristics | Shuffled clouds have no trajectory — closure heuristics fail |
+
+## Run
+
+```bash
+pip install -e .
+python chapters/14_topology_tda/demo.py
+```
+
+## Related
+
+- Chapter 05 — optimal transport for correspondence (geometry of matching)
+- Chapter 06 — Wasserstein map drift (metric on occupancy, not topology)
+- Chapter 02 — pose graph loop closure (optimization once loops are hypothesized)
+
+## Next
+
+→ [Benchmark suite](../../benchmarks/README.md) · [docs site](https://rsasaki0109.github.io/RobotMath2030/)

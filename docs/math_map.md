@@ -45,6 +45,11 @@ Neural Operators
 ├── failure: grid-flattened MLP without operator structure
 └── chapter: Ch.13 DeepONet preview ✅
 
+Topology / TDA
+├── used in: loop closure hints, map topology, coverage holes
+├── failure: single-scale clustering counts components not holes
+└── chapter: Ch.14 Loop detection ✅
+
 World Models & Differentiable Physics
 ├── used in: latent dynamics, imagination rollout, system ID
 ├── failure: open-loop drift, hard contact breaks gradients

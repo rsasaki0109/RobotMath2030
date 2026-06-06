@@ -47,4 +47,4 @@ python chapters/13_neural_operators/demo.py
 
 ## Next
 
-→ [Benchmark suite](../../benchmarks/README.md) · [docs site](https://rsasaki0109.github.io/RobotMath2030/)
+→ [Chapter 14 — Topology / TDA](../14_topology_tda/README.md)

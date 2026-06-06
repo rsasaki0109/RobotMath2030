@@ -38,3 +38,17 @@ jobs:
         env:
           MPLBACKEND: Agg
           PYTEST_DISABLE_PLUGIN_AUTOLOAD: "1"
+
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -e ".[all]"
+      - name: Run timed regression benchmarks
+        run: python benchmarks/run_benchmarks.py
+        env:
+          PYTEST_DISABLE_PLUGIN_AUTOLOAD: "1"

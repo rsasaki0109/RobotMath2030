@@ -1,0 +1,24 @@
+title: "Topology / TDA — Loop Detection in Scans"
+math:
+  - persistent homology
+  - Vietoris–Rips filtration
+  - H1 features (1-cycles)
+robotics:
+  - loop closure hints from lidar
+  - map topology vs density clustering
+  - unordered point clouds
+code:
+  main_file: robotmath/topology/persistence.py
+difficulty: intermediate
+runtime: "< 5 s on CPU"
+dependencies:
+  - numpy
+  - matplotlib
+failure_cases:
+  - single-scale connected components
+  - k-means cluster count as loop proxy
+  - scan-order heuristics on shuffled clouds
+related_libraries:
+  - Ripser
+  - GUDHI
+  - giotto-tda
