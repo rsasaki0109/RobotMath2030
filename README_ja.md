@@ -63,7 +63,7 @@ Month 2  Geometry of Distribution  Sinkhorn OT · diffusion · 自然勾配
 Month 3  Geometry of Dynamics      微分可能物理 · tiny world model
 ```
 
-詳細は [docs/roadmap.md](docs/roadmap.md)。
+詳細は [docs/roadmap.md](docs/roadmap.md)。**Docs:** [rsasaki0109.github.io/RobotMath2030](https://rsasaki0109.github.io/RobotMath2030/)
 
 ## インストール
 

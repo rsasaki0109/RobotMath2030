@@ -76,6 +76,8 @@ Month 3  Geometry of Dynamics     Differentiable physics · tiny world model
 
 See [docs/roadmap.md](docs/roadmap.md) for the full plan.
 
+**Docs site:** [rsasaki0109.github.io/RobotMath2030](https://rsasaki0109.github.io/RobotMath2030/) · build locally: `pip install -e ".[docs]" && python scripts/sync_chapter_docs.py && mkdocs serve`
+
 ## Repository structure
 
 ```
