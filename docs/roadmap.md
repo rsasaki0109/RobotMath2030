@@ -69,7 +69,7 @@
 | [15 Tiny Math Engines landing page](landing.md) | ✅ MkDocs |
 | README / docs GIF gallery (6) | ✅ |
 | [CONTRIBUTING.md](https://github.com/rsasaki0109/RobotMath2030/blob/main/CONTRIBUTING.md) | ✅ expanded |
-| v0.2.1 release tag | ✅ |
+| v0.2.2 release tag | ✅ |
 
 ## Star milestones
 
