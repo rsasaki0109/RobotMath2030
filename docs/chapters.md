@@ -1,6 +1,6 @@
-# 10+2 Tiny Math Engines
+# 14 Tiny Math Engines
 
-All twelve chapters are runnable locally. Each follows:
+All fourteen chapters are runnable locally. Each follows:
 
 **math → minimal code → robotics context → failure cases**
 
@@ -58,7 +58,15 @@ Ch.12 requires PyTorch.
 
 **You learn:** DeepONet-style operators, amortized simulation vs integrator loops.
 
-Timed benchmarks: `python benchmarks/run_benchmarks.py`
+## Phase 3 — Topology
+
+| # | Chapter | Run |
+|---|---------|-----|
+| 14 | [Topology / TDA](chapters/14_topology_tda.md) | `python chapters/14_topology_tda/demo.py` |
+
+**You learn:** persistent loops (β₁) in lidar-like clouds vs single-scale connectivity.
+
+Timed benchmarks (CI): `python benchmarks/run_benchmarks.py`
 
 ## Suggested reading orders
 
@@ -66,7 +74,7 @@ Timed benchmarks: `python benchmarks/run_benchmarks.py`
 
 **SLAM / mapping engineer:** 01 → 02 → 03 → 05 → 06 → 04
 
-**Full curriculum:** 01 through 12 in order
+**Full curriculum:** 01 through 14 in order
 
 ## Colab quick start
 

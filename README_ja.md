@@ -23,7 +23,7 @@ GIF 再生成: `pip install -e ".[torch]" && python scripts/render_all_gifs.py`
 
 RobotMath2030はそのギャップを埋めます。
 
-## 全10章（MVP 完成）
+## 全14章（Phase 2 完成 · v0.2.0）
 
 完全ガイド: [docs/chapters.md](docs/chapters.md) · 索引: [docs/concept_index.yaml](docs/concept_index.yaml)
 
@@ -42,6 +42,7 @@ RobotMath2030はそのギャップを埋めます。
 | [11 — Information geometry](chapters/11_information_geometry/) | Fisher metric / natural gradient |
 | [12 — SE(3)-equivariant preview](chapters/12_se3_equivariant_preview/) | 等変性 vs 素朴 MLP |
 | [13 — Neural operators](chapters/13_neural_operators/) | DeepONet  surrogate / 積分の高速化 |
+| [14 — Topology / TDA](chapters/14_topology_tda/) | スキャンのループ検出；β₁ vs 単一スケール連結成分 |
 
 ```bash
 pip install -e ".[torch]"
