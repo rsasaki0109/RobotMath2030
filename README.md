@@ -41,7 +41,7 @@ math definition  →  minimal runnable code  →  robotics context  →  failure
 
 ## All 15 chapters
 
-**Phase 3 complete (v0.2.1)** — full guide: [docs/chapters.md](docs/chapters.md) · machine index: [docs/concept_index.yaml](docs/concept_index.yaml)
+**Phase 4 complete (v0.2.2)** — full guide: [docs/chapters.md](docs/chapters.md) · landing: [15 Tiny Math Engines](https://rsasaki0109.github.io/RobotMath2030/landing/)
 
 | Chapter | What you learn |
 |---------|----------------|
